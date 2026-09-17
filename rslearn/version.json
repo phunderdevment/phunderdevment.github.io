@@ -1,0 +1,14 @@
+{
+  "android": {
+    "neusteVersion": "1.3.0",
+    "mindestVersion": "1.3.0",
+    "link": "https://play.google.com/store/apps/details?id=ch.rslearn.medi"
+  },
+  "ios": {
+    "neusteVersion": "1.3.0",
+    "mindestVersion": "1.3.0",
+    "link": "https://testflight.apple.com/join/HIER-TESTFLIGHT-CODE"
+  },
+  "hinweis": "",
+  "infoUrl": null
+}

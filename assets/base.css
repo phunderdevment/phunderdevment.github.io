@@ -1,0 +1,33 @@
+:root{--bg:#ffffff;--text:#1d2125;--muted:#646b72;--line:#e4e6e9;--soft:#f5f6f7;--accent:#1d2125}
+@media (prefers-color-scheme: dark){:root{--bg:#121416;--text:#e8eaec;--muted:#9aa2a9;--line:#2a2e32;--soft:#1a1d20;--accent:#e8eaec}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+.logo{font-weight:700;letter-spacing:.3px;color:var(--text);text-decoration:none}
+.top nav{display:flex;gap:16px;flex-wrap:wrap}
+.top nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+.top nav a:hover{color:var(--text)}
+main{padding:48px 0 56px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 10px;letter-spacing:-.3px}
+h2{font-size:1.15rem;margin:40px 0 10px}
+.lead{color:var(--muted);font-size:1.08rem;margin:0}
+a{color:var(--text)}
+.apps{display:grid;gap:12px;margin-top:14px}
+.app{display:flex;align-items:center;gap:16px;padding:16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--text);background:var(--bg);transition:border-color .15s,background .15s}
+.app:hover{border-color:var(--muted);background:var(--soft)}
+.app-icon{flex:0 0 52px;height:52px;border-radius:12px;display:grid;place-items:center;font-weight:700;font-size:.8rem;letter-spacing:.3px}
+.app-body{flex:1;min-width:0}
+.app-body strong{display:block;font-size:1.05rem}
+.app-body span{color:var(--muted);font-size:.95rem}
+.app-arrow{color:var(--muted);font-size:1.3rem}
+ul{padding-left:1.2em}
+.muted{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:20px 0 32px;color:var(--muted);font-size:.9rem}
+footer .links{display:flex;gap:6px 18px;flex-wrap:wrap;margin-bottom:6px}
+footer a{color:var(--muted)}
+.legal h2{margin-top:32px}
+.note{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:16px 0}
+body{min-height:100vh;display:flex;flex-direction:column}main{flex:1}
