@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung — private Home-Assistant-Instanz</title>
+<meta name="description" content="Datenschutzerklärung zur privaten Home-Assistant-Installation und zum Zugriff auf eigene Google-Nest-Geräte.">
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --fg: #23211e;
+    --muted: #6b665e;
+    --line: #e2ddd5;
+    --accent: #1f6f78;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171614;
+      --fg: #eceae6;
+      --muted: #a29b91;
+      --line: #322f2b;
+      --accent: #5fb3bc;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 4rem 16px 5rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin: 0 0 .4rem;
+    letter-spacing: -.01em;
+  }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; }
+  h2 {
+    font-size: 1.1rem;
+    margin: 2.5rem 0 .6rem;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .35rem; }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .92rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Datenschutzerklärung</h1>
+  <p class="sub">Gilt für die private Home-Assistant-Installation und den zugehörigen OAuth-Client.</p>
+
+  <h2>Verantwortlich</h2>
+  <p>
+    [DEIN NAME]<br>
+    [DEINE ADRESSE, ORT]<br>
+    [DEINE E-MAIL-ADRESSE]
+  </p>
+
+  <h2>Art der Anwendung</h2>
+  <p>
+    Es handelt sich um eine private Installation der Software Home Assistant, die auf eigener
+    Hardware im eigenen Haushalt betrieben wird. Die Anwendung wird ausschliesslich vom
+    Betreiber selbst genutzt. Es gibt keine weiteren Nutzerkonten, keine Registrierung und
+    kein öffentlich zugängliches Angebot.
+  </p>
+
+  <h2>Verarbeitete Google-Daten</h2>
+  <p>
+    Meldet sich der Betreiber mit seinem Google-Konto an, greift die Installation über die
+    Smart Device Management API auf folgende Daten seiner eigenen Google-Nest-Geräte zu:
+  </p>
+  <ul>
+    <li>Gerätelisten und Geräteeigenschaften, etwa Name, Typ und Raumzuordnung</li>
+    <li>Gerätezustände, etwa Temperatur, Luftfeuchtigkeit oder Betriebsmodus</li>
+    <li>Ereignisse von Kameras und Türklingel, etwa Bewegung, Personenerkennung und Klingeln</li>
+    <li>Bild- und Videoausschnitte zu solchen Ereignissen sowie Live-Streams, soweit das Gerät dies unterstützt</li>
+    <li>Zugriffs- und Erneuerungstoken (OAuth), die für den Zugriff benötigt werden</li>
+  </ul>
+
+  <h2>Zweck</h2>
+  <p>
+    Die Daten werden allein dazu verwendet, die eigenen Geräte in der eigenen
+    Home-Assistant-Instanz darzustellen, zu steuern und Automationen im eigenen Haushalt
+    auszulösen. Eine andere Verwendung findet nicht statt.
+  </p>
+
+  <h2>Speicherung</h2>
+  <p>
+    Die Verarbeitung erfolgt lokal auf der Hardware des Betreibers. Zustände und Ereignisse
+    werden dort in der Datenbank von Home Assistant abgelegt und nach der eingestellten
+    Aufbewahrungsdauer automatisch gelöscht. Zugangstoken liegen verschlüsselt in der
+    Konfiguration der Installation. Ereignismeldungen werden auf dem Weg von Google zur
+    Installation über Google Cloud Pub/Sub übermittelt; dieser Dienst untersteht Googles
+    eigenen Datenschutzbestimmungen.
+  </p>
+
+  <h2>Weitergabe</h2>
+  <p>
+    Es findet keine Weitergabe an Dritte statt. Die Daten werden nicht verkauft, nicht für
+    Werbung verwendet, nicht zur Profilbildung genutzt und nicht zum Trainieren von
+    KI-Modellen eingesetzt.
+  </p>
+
+  <h2>Umgang mit Google-Nutzerdaten</h2>
+  <p>
+    Die Verwendung von Informationen, die über Google-APIs bezogen werden, richtet sich nach der
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>
+    einschliesslich der darin enthaltenen Limited-Use-Anforderungen.
+  </p>
+
+  <h2>Zugriff entziehen</h2>
+  <p>
+    Der erteilte Zugriff kann jederzeit im eigenen Google-Konto unter
+    <a href="https://myaccount.google.com/permissions" rel="noopener">Drittanbieter-Apps mit Kontozugriff</a>
+    sowie im Nest
+    <a href="https://nestservices.google.com/partnerconnections" rel="noopener">Partner Connections Manager</a>
+    widerrufen werden. Danach ruft die Installation keine Daten mehr ab. Bereits lokal
+    gespeicherte Daten können in Home Assistant gelöscht werden.
+  </p>
+
+  <h2>Änderungen</h2>
+  <p>
+    Diese Erklärung kann angepasst werden, wenn sich der Funktionsumfang der Installation
+    ändert. Stand: [DATUM].
+  </p>
+
+  <footer>
+    <a href="index.html">Zurück zur Startseite</a>
+  </footer>
+</main>
+</body>
+</html>
