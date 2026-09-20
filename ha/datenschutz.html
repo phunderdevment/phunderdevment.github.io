@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung — Home Assistant Therwil 12</title>
+<meta name="description" content="Datenschutzerklärung von Home Assistant Therwil 12: welche Google-Daten erhoben, wofür sie verwendet, wie lange sie gespeichert und wie sie geschützt werden.">
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --fg: #23211e;
+    --muted: #6b665e;
+    --line: #e2ddd5;
+    --accent: #1f6f78;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171614;
+      --fg: #eceae6;
+      --muted: #a29b91;
+      --line: #322f2b;
+      --accent: #5fb3bc;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 4rem 16px 5rem;
+  }
+  h1 { font-size: 1.8rem; line-height: 1.2; margin: 0 0 .4rem; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; }
+  h2 {
+    font-size: 1.1rem;
+    margin: 2.5rem 0 .6rem;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h3 { font-size: 1rem; margin: 1.6rem 0 .4rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1.4rem;
+    font-size: .95rem;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: .55rem .6rem .55rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  th { color: var(--muted); font-weight: 600; }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .92rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Datenschutzerklärung</h1>
+  <p class="sub">Für die Anwendung <strong>Home Assistant Therwil 12</strong>. Stand: [DATUM].</p>
+
+  <h2>1. Um welche Anwendung es geht</h2>
+  <p>
+    Diese Erklärung gilt für <strong>Home Assistant Therwil 12</strong>, eine private
+    Installation der Open-Source-Software Home Assistant. Sie läuft auf eigener Hardware im
+    Haushalt des Betreibers und wird ausschliesslich von ihm selbst genutzt. Es gibt keine
+    Registrierung, keine Nutzerkonten und keinen Zugriff für Dritte. Dieselbe Erklärung gilt
+    für den OAuth-Client, über den sich die Anwendung mit dem Google-Konto des Betreibers
+    verbindet.
+  </p>
+  <p>
+    Verantwortlich ist der Betreiber als Privatperson.
+    Anfragen an: <a href="mailto:[DEINE E-MAIL-ADRESSE]">[DEINE E-MAIL-ADRESSE]</a>
+  </p>
+
+  <h2>2. Welche Daten erhoben werden</h2>
+  <p>
+    Die Anwendung ruft über die Smart Device Management API ausschliesslich Daten zu den
+    Google-Nest-Geräten ab, die der Betreiber bei der Anmeldung selbst freigegeben hat.
+    Freigegeben wird gerätebezogen; nicht freigegebene Geräte bleiben der Anwendung verborgen.
+    Im Einzelnen werden die folgenden Daten erhoben:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Datenart</th><th>Beispiele</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Kontoinformationen</td>
+        <td>Kennung des Google-Kontos zur Zuordnung der Freigabe; keine Kontaktdaten, keine Kontaktliste, kein Adressbuch</td>
+      </tr>
+      <tr>
+        <td>Gerätestammdaten</td>
+        <td>Gerätekennung, Gerätetyp, vom Betreiber vergebener Gerätename, Zuordnung zu Haus und Raum</td>
+      </tr>
+      <tr>
+        <td>Gerätezustände</td>
+        <td>Temperatur, Luftfeuchtigkeit, Betriebs- und Lüftermodus der Thermostate, Verbindungsstatus der Geräte</td>
+      </tr>
+      <tr>
+        <td>Ereignismeldungen</td>
+        <td>Bewegung erkannt, Person erkannt, Geräusch erkannt, Türklingel betätigt — jeweils mit Zeitstempel und, falls konfiguriert, dem Namen der erkennenden Zone</td>
+      </tr>
+      <tr>
+        <td>Bild- und Videodaten</td>
+        <td>Standbilder und kurze Videoausschnitte zu Ereignissen sowie Live-Streams der Kameras und der Türklingel, soweit das jeweilige Gerät dies unterstützt</td>
+      </tr>
+      <tr>
+        <td>Zugangsdaten</td>
+        <td>OAuth-Zugriffs- und Erneuerungstoken, die den Zugriff auf die freigegebenen Geräte ermöglichen</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    <strong>Nicht erhoben werden:</strong> E-Mails, Kalender, Kontakte, Dateien aus Google Drive,
+    Standortverläufe, Suchverläufe oder sonstige Daten des Google-Kontos. Die Anwendung fordert
+    dafür keine Berechtigungen an.
+  </p>
+
+  <h3>Wie die Daten die Anwendung erreichen</h3>
+  <p>
+    Zustände und Gerätelisten werden von der Anwendung direkt bei der Smart Device Management
+    API abgefragt. Ereignisse werden von Google über Google Cloud Pub/Sub an ein Thema im
+    Cloud-Projekt des Betreibers gesendet, das die Anwendung abonniert hat. Die Anwendung
+    betreibt darüber hinaus keine eigenen Server und sendet keine Daten an eigene Dienste.
+  </p>
+
+  <h2>3. Wofür die Daten verwendet werden</h2>
+  <ul>
+    <li><strong>Anzeige:</strong> Darstellung der Geräte, ihrer Zustände und der Kamerabilder auf den Übersichtsseiten der Anwendung, auf dem Wandpanel im Haushalt und in der Home-Assistant-App des Betreibers.</li>
+    <li><strong>Steuerung:</strong> Übermittlung von Befehlen des Betreibers an seine eigenen Geräte, etwa das Ändern der Zieltemperatur.</li>
+    <li><strong>Automationen:</strong> Auslösen der vom Betreiber selbst angelegten Regeln, etwa eine Benachrichtigung mit Standbild beim Betätigen der Türklingel.</li>
+    <li><strong>Verlauf:</strong> Aufzeichnung von Messwerten und Ereignissen, um Verläufe im eigenen Haushalt nachvollziehen zu können.</li>
+  </ul>
+  <p>
+    Eine andere Verwendung findet nicht statt. Die Daten werden insbesondere nicht für Werbung,
+    nicht zur Profilbildung, nicht für Analysen Dritter und nicht zum Trainieren von
+    KI-Modellen verwendet.
+  </p>
+
+  <h2>4. Speicherung und Aufbewahrung</h2>
+  <p>
+    Die Verarbeitung und Speicherung erfolgt lokal auf der Hardware des Betreibers in der
+    Schweiz. Es gibt keine Speicherung in einer Cloud des Betreibers und keine Übermittlung
+    an eigene Server.
+  </p>
+  <ul>
+    <li><strong>Zustände und Ereignisse</strong> liegen in der lokalen Datenbank von Home Assistant und werden nach der eingestellten Aufbewahrungsdauer automatisch gelöscht.</li>
+    <li><strong>Bild- und Videoausschnitte</strong> werden nur vorübergehend lokal zwischengespeichert, damit sie in Benachrichtigungen angezeigt werden können, und danach automatisch entfernt.</li>
+    <li><strong>Zugangstoken</strong> werden verschlüsselt in der lokalen Konfiguration der Anwendung abgelegt und bei Widerruf des Zugriffs unbrauchbar.</li>
+    <li><strong>Ereignismeldungen bei Google Cloud Pub/Sub</strong> werden nach Zustellung an die Anwendung bestätigt und von Google gemäss dessen Vorgaben gelöscht.</li>
+  </ul>
+
+  <h2>5. Weitergabe an Dritte</h2>
+  <p>
+    Es findet keine Weitergabe an Dritte statt. Die Daten werden nicht verkauft, nicht
+    vermietet, nicht getauscht und keinem Dienstleister zur Auswertung überlassen. Eine
+    Offenlegung erfolgt nur, soweit der Betreiber gesetzlich dazu verpflichtet wäre.
+  </p>
+
+  <h2>6. Umgang mit Google-Nutzerdaten</h2>
+  <p>
+    Die Verwendung von Informationen, die über Google-APIs bezogen werden, hält sich an die
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>
+    einschliesslich der darin enthaltenen Limited-Use-Anforderungen. Die abgerufenen Daten
+    werden ausschliesslich für die unter Punkt 3 genannten, für den Betreiber sichtbaren
+    Funktionen verwendet, nicht an Dritte weitergegeben, nicht für Werbung eingesetzt und
+    nicht von Menschen gelesen, ausser der Betreiber selbst sieht sie in seiner eigenen
+    Anwendung an.
+  </p>
+
+  <h2>7. Schutz der Daten</h2>
+  <p>
+    Die Verbindung zu den Google-Diensten erfolgt verschlüsselt über HTTPS. Der Zugang zur
+    Anwendung ist durch Benutzername, Passwort und Zwei-Faktor-Authentisierung geschützt.
+    Die Hardware steht in den privaten Räumen des Betreibers. Zugangstoken liegen
+    verschlüsselt und werden nicht in Sicherungen exportiert, die den Haushalt verlassen.
+  </p>
+
+  <h2>8. Zugriff widerrufen und Daten löschen</h2>
+  <p>
+    Der erteilte Zugriff kann jederzeit widerrufen werden, unter
+    <a href="https://myaccount.google.com/permissions" rel="noopener">Drittanbieter-Apps mit Kontozugriff</a>
+    im Google-Konto oder im
+    <a href="https://nestservices.google.com/partnerconnections" rel="noopener">Nest Partner Connections Manager</a>,
+    wo sich die Freigabe auch auf einzelne Geräte einschränken lässt. Nach dem Widerruf ruft
+    die Anwendung keine Daten mehr ab. Bereits lokal gespeicherte Daten werden gelöscht, indem
+    die Integration in Home Assistant entfernt wird; die zugehörigen Datenbankeinträge und
+    zwischengespeicherten Medien werden dabei mit entfernt.
+  </p>
+
+  <h2>9. Diese Website</h2>
+  <p>
+    Die Seiten unter <code>phunderdevment.ch/HA/</code> bestehen nur aus dieser Erklärung und
+    der zugehörigen Startseite. Sie setzen keine Cookies, binden keine Schriften, Skripte oder
+    Inhalte Dritter ein und verwenden keine Analysewerkzeuge. Beim Abruf fallen lediglich die
+    üblichen Server-Protokolldaten des Hosters an.
+  </p>
+
+  <h2>10. Änderungen</h2>
+  <p>
+    Ändert sich der Funktionsumfang der Anwendung, wird diese Erklärung angepasst. Es gilt
+    jeweils die hier veröffentlichte Fassung.
+  </p>
+
+  <footer>
+    <a href="https://www.phunderdevment.ch/HA/">Zurück zu Home Assistant Therwil 12</a>
+  </footer>
+</main>
+</body>
+</html>
