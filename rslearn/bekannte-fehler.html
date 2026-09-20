@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RS:Learn@medi – Bekannte Fehler</title>
+<meta name="description" content="Bekannte Fehler in RS:Learn@medi, ihr Stand und wann mit einer Behebung zu rechnen ist.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="rslearn.css">
+<style>
+  .stand{color:var(--muted);font-size:.92rem;margin:0 0 26px}
+  .legende{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px}
+  .lg{display:inline-flex;align-items:center;gap:7px;font-size:.86rem;color:var(--muted)}
+  .lg::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--muted)}
+  .lg.offen::before{background:#c98a00}
+  .lg.arbeit::before{background:var(--petrol)}
+  .lg.behoben::before{background:#1f7f55}
+
+  .eintrag{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 14px;background:var(--card)}
+  .eintrag h3{font-family:var(--head-font);font-weight:700;font-size:1.05rem;margin:0 0 4px;color:var(--text)}
+  .kopf{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+  .marke{font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    border-radius:999px;padding:3px 11px;white-space:nowrap}
+  .m-offen{background:#fdf0cf;color:#6b4900}
+  .m-arbeit{background:var(--soft);color:var(--petrol)}
+  .m-behoben{background:#e2f1ea;color:#1f7f55}
+  .m-plattform{background:var(--soft);color:var(--muted)}
+  @media (prefers-color-scheme:dark){
+    .m-offen{background:#3a2f0e;color:#f0c24a}
+    .m-arbeit{background:#15363e;color:#7cc3d1}
+    .m-behoben{background:#122b22;color:#6fcfa5}
+    .m-plattform{background:#16272b;color:var(--muted)}
+  }
+  .eintrag p{margin:0 0 10px}
+  .eintrag p:last-child{margin-bottom:0}
+  .umgehung{background:var(--soft);border-radius:10px;padding:11px 14px;font-size:.93rem}
+  .umgehung b{display:block;margin-bottom:2px}
+  .leer{color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <a class="mark" href="./">RS:LEARN@MEDI</a>
+  <nav>
+    <a href="./">Übersicht</a>
+    <a href="demo.html">Demo</a>
+    <a href="bekannte-fehler.html" aria-current="page">Bekannte Fehler</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+  </nav>
+</div></div>
+
+<main><div class="wrap"><div class="legal">
+
+  <h1>Bekannte Fehler</h1>
+  <p class="stand">Stand: 20. September 2026 · betrifft Version 1.3.0</p>
+
+  <p>Hier siehst du, welche Fehler bereits gemeldet wurden und woran gearbeitet wird. Wenn dir etwas auffällt, das hier nicht steht: melde es bitte – in der App über das Melde-Symbol oder direkt an die Kontaktadresse unten.</p>
+
+  <div class="legende">
+    <span class="lg offen">Gemeldet</span>
+    <span class="lg arbeit">In Arbeit</span>
+    <span class="lg behoben">Behoben</span>
+  </div>
+
+  <h2>Offen</h2>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-arbeit">In Arbeit</span>
+      <span class="marke m-plattform">iPhone / iPad</span>
+    </div>
+    <h3>Tastatur verdeckt die Schaltflächen</h3>
+    <p>Beim Beantworten einer Freitextfrage – in den Übungsfragen wie in der Prüfungssimulation – öffnet sich die Bildschirmtastatur. Tippt man anschliessend neben das Eingabefeld, schliesst sie sich nicht wieder. Die Schaltflächen am unteren Rand («Lösung anzeigen», «Nächste Frage») bleiben dadurch verdeckt.</p>
+    <div class="umgehung">
+      <b>Bis zur Behebung</b>
+      Wische von der Tastatur aus nach unten – dann verschwindet sie und die Schaltflächen werden sichtbar.
+    </div>
+    <p style="margin-top:12px"><strong>Behebung geplant für Version 1.4.0.</strong></p>
+  </div>
+
+  <h2>Behoben</h2>
+  <p class="leer">Noch keine Einträge.</p>
+
+  <h2>Etwas gefunden?</h2>
+  <p>Am hilfreichsten ist eine Meldung, die sagt: was du gemacht hast, was du erwartet hast und was stattdessen passiert ist. Ein Screenshot hilft zusätzlich, ebenso die Angabe deines Geräts.</p>
+  <p>In der App findest du beim jeweiligen Inhalt ein <strong>Melde-Symbol</strong> – damit landet die Rückmeldung direkt beim Ersteller. Alternativ genügt eine kurze Nachricht.</p>
+
+</div></div></main>
+
+<footer><div class="wrap">
+  <div class="links">
+    <a href="./">RS:Learn@medi</a>
+    <a href="demo.html">Demo</a>
+    <a href="bekannte-fehler.html">Bekannte Fehler</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+    <a href="../">Alle Apps</a>
+  </div>
+  <div>Erstellt mit Claude AI · PhunderDev</div>
+</div></footer>
+
+</body>
+</html>
