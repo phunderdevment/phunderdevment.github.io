@@ -55,7 +55,7 @@
 <main><div class="wrap"><div class="legal">
 
   <h1>Bekannte Fehler</h1>
-  <p class="stand">Stand: 21. September 2026 · betrifft Version 1.3.0</p>
+  <p class="stand">Stand: 21. September 2026 · betrifft Version 1.4.0</p>
 
   <p>Hier siehst du, welche Fehler bereits gemeldet wurden und woran gearbeitet wird. Wenn dir etwas auffällt, das hier nicht steht: melde es bitte – in der App über das Melde-Symbol oder direkt an die Kontaktadresse unten.</p>
 
@@ -66,23 +66,29 @@
   </div>
 
   <h2>Offen</h2>
+  <p class="leer">Zurzeit sind keine Fehler offen. Danke fürs Melden – genau so wird die App besser.</p>
+
+  <h2>Behoben</h2>
 
   <div class="eintrag">
     <div class="kopf">
-      <span class="marke m-arbeit">In Arbeit</span>
+      <span class="marke m-behoben">Behoben in 1.4.0</span>
       <span class="marke m-plattform">iPhone / iPad</span>
     </div>
     <h3>Tastatur verdeckt die Schaltflächen</h3>
-    <p>Beim Beantworten einer Freitextfrage – in den Übungsfragen wie in der Prüfungssimulation – öffnet sich die Bildschirmtastatur. Tippt man anschliessend neben das Eingabefeld, schliesst sie sich nicht wieder. Die Schaltflächen am unteren Rand («Lösung anzeigen», «Nächste Frage») bleiben dadurch verdeckt.</p>
-    <div class="umgehung">
-      <b>Bis zur Behebung</b>
-      Wische von der Tastatur aus nach unten – dann verschwindet sie und die Schaltflächen werden sichtbar.
-    </div>
-    <p style="margin-top:12px"><strong>Behebung geplant für Version 1.4.0.</strong></p>
+    <p>Beim Beantworten einer Freitextfrage – in den Übungsfragen wie in der Prüfungssimulation – öffnete sich die Bildschirmtastatur. Tippte man anschliessend neben das Eingabefeld, schloss sie sich nicht wieder. Die Schaltflächen am unteren Rand («Lösung anzeigen», «Nächste Frage») blieben dadurch verdeckt.</p>
+    <p>Seit Version 1.4.0 schliesst ein Tipp neben das Eingabefeld die Tastatur, der Inhalt rückt über der Tastatur nach oben, und auf der Tastatur gibt es eine «Fertig»-Taste. Das gilt auf dem iPhone und auf Android gleichermassen.</p>
+    <p class="umgehung"><b>Gemeldet</b>20. September 2026, über TestFlight. Vielen Dank!</p>
   </div>
 
-  <h2>Behoben</h2>
-  <p class="leer">Noch keine Einträge.</p>
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 1.4.0</span>
+      <span class="marke m-plattform">Alle Geräte</span>
+    </div>
+    <h3>Rückmeldungen konnten still verloren gehen</h3>
+    <p>Unter bestimmten Servereinstellungen nahm die App eine Rückmeldung als «gesendet» an, obwohl der Server sie gar nicht gespeichert hatte. Seit Version 1.4.0 gilt eine Meldung erst dann als übermittelt, wenn der Server das ausdrücklich bestätigt – sonst wird sie beim nächsten Mal erneut gesendet.</p>
+  </div>
 
   <h2>Etwas gefunden?</h2>
   <p>Am hilfreichsten ist eine Meldung, die sagt: was du gemacht hast, was du erwartet hast und was stattdessen passiert ist. Ein Screenshot hilft zusätzlich, ebenso die Angabe deines Geräts.</p>
