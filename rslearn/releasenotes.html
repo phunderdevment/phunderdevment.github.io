@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RS:Learn@medi – Release Notes</title>
+<meta name="description" content="Versionsverlauf von RS:Learn@medi: was in jeder Version neu ist, wann sie erschienen ist und für welche Geräte.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="rslearn.css">
+<style>
+  .stand{color:var(--muted);font-size:.92rem;margin:0 0 26px}
+
+  /* --- Versionseintrag --- */
+  .version{border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:0 0 18px;background:var(--card)}
+  .version.aktuell{border-color:var(--petrol)}
+
+  .vkopf{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;margin-bottom:4px}
+  .vnr{font-family:var(--head-font);font-weight:700;font-size:1.45rem;line-height:1.2;color:var(--text);margin:0}
+  .vdatum{color:var(--muted);font-size:.92rem}
+
+  .marken{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+  .marke{font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    border-radius:999px;padding:3px 11px;white-space:nowrap}
+  .m-aktuell{background:var(--petrol);color:#fff}
+  .m-plattform{background:var(--soft);color:var(--petrol)}
+  .m-wartet{background:#fdf0cf;color:#6b4900}
+  @media (prefers-color-scheme:dark){
+    .m-plattform{background:#15363e;color:#7cc3d1}
+    .m-wartet{background:#3a2f0e;color:#f0c24a}
+  }
+
+  /* --- Das Wichtigste --- */
+  .wichtig{margin:0 0 6px}
+  .wichtig h3,.technik h3{font-family:var(--head-font);font-weight:700;font-size:.82rem;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  .punkte{list-style:none;padding:0;margin:0}
+  .punkte li{position:relative;padding:0 0 0 22px;margin:0 0 9px;line-height:1.55}
+  .punkte li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;
+    border-radius:50%;background:var(--petrol)}
+  .punkte li b{color:var(--text)}
+  .punkte li:last-child{margin-bottom:0}
+  .punkte li.fix::before{background:#1f7f55}
+
+  /* --- Technisches --- */
+  .technik{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+  .technik summary{cursor:pointer;font-family:var(--head-font);font-weight:700;font-size:.82rem;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--muted);list-style:none;
+    display:flex;align-items:center;gap:8px;padding:2px 0}
+  .technik summary::-webkit-details-marker{display:none}
+  .technik summary::before{content:"";width:0;height:0;border-left:6px solid var(--muted);
+    border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;transition:transform .15s}
+  .technik[open] summary::before{transform:rotate(90deg)}
+  .technik summary:hover{color:var(--petrol)}
+  .technik summary:hover::before{border-left-color:var(--petrol)}
+  .technik .inhalt{padding-top:14px;font-size:.95rem}
+  .technik ul{list-style:none;padding:0;margin:0}
+  .technik ul li{position:relative;padding:0 0 0 18px;margin:0 0 8px;line-height:1.55;color:var(--muted)}
+  .technik ul li::before{content:"–";position:absolute;left:2px;color:var(--line)}
+  .technik ul li:last-child{margin-bottom:0}
+  .technik code{font-size:.88em;background:var(--soft);border-radius:5px;padding:1px 5px}
+
+  .fussnote{color:var(--muted);font-size:.93rem}
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="wrap">
+  <a class="mark" href="./">RS:LEARN@MEDI</a>
+  <nav>
+    <a href="./">Übersicht</a>
+    <a href="demo.html">Demo</a>
+    <a href="unterstuetzen.html">Unterstützen</a>
+    <a href="releasenotes.html" aria-current="page">Release Notes</a>
+    <a href="bekannte-fehler.html">Bekannte Fehler</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+  </nav>
+</div></header>
+
+<main><div class="wrap legal">
+
+  <h1>Release Notes</h1>
+  <p class="stand">Stand: 22. September 2026 · aktuelle Version 1.4.0</p>
+
+  <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
+
+  <!-- ===================== 1.4.0 ===================== -->
+  <div class="version aktuell">
+    <div class="vkopf">
+      <h2 class="vnr">1.4.0</h2>
+      <span class="vdatum">22. September 2026</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-aktuell">Aktuell</span>
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-wartet">iPhone / iPad · in Prüfung</span>
+    </div>
+
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li><b>Lernpaket-Bibliothek mit persönlichem Zugang.</b> Benutzername und Passwort trägst du selbst unter <em>Einstellungen › Lernpaket-Bibliothek</em> ein. Die Bibliothek ist nach Klasse und Prüfung gegliedert und aufklappbar.</li>
+        <li><b>Lernpakete halten sich selbst aktuell.</b> Standardmässig nur im WLAN, höchstens einmal täglich und nie während einer laufenden Prüfungssimulation. Dein Lernfortschritt bleibt dabei erhalten. Abschaltbar.</li>
+        <li><b>Versionsverlauf je Lernpaket</b> – im Menü einer Vorbereitung und gesammelt in den Einstellungen. Funktioniert auch offline.</li>
+        <li><b>Startbildschirm nach Prüfungsdatum sortiert</b>, mit Restzeit in Alltagssprache («in 3 Wochen», «übermorgen»). Neu auch eine Zeile «Zuletzt verwendet».</li>
+        <li><b>Automatisches Archivieren</b> 14 Tage nach der Prüfung, mit «Rückgängig» direkt auf dem Startbildschirm. Abschaltbar.</li>
+        <li><b>Demo-Lernpaket steckt jetzt in der App.</b> Kein Download, kein Zugang nötig – es wird beim ersten Start angelegt und lässt sich jederzeit erneut erzeugen.</li>
+        <li><b>«Bekannte Fehler»</b> als eigener Eintrag unter <em>Info &amp; Rechtliches</em>.</li>
+        <li class="fix"><b>Behoben:</b> Die Tastatur verdeckte bei Freitextfragen die Schaltflächen. Ein Tipp neben das Eingabefeld schliesst sie jetzt, und der Inhalt rückt darüber.</li>
+        <li class="fix"><b>Behoben:</b> Rückmeldungen konnten still verloren gehen. Eine Meldung gilt jetzt erst als übermittelt, wenn der Server sie bestätigt hat.</li>
+      </ul>
+    </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Die Zugangsdaten der Bibliothek liegen in einer eigenen Datei im privaten App-Ordner – <strong>nicht</strong> in der Gerätesicherung und <strong>nicht</strong> im Google-Drive-Abgleich. Dadurch lässt sich ein Zugang entziehen, ohne dass alle eine neue App-Version brauchen.</li>
+          <li>Der Katalog wird lokal gemerkt. Archiv-Gliederung und Versionsverlauf funktionieren deshalb auch ohne Internet.</li>
+          <li>Neue Berechtigung <code>ACCESS_NETWORK_STATE</code> auf Android, <code>NWPathMonitor</code> auf iOS – ausschliesslich zur Unterscheidung von WLAN und Mobilfunk. Im Zweifel wird nicht geladen.</li>
+          <li>Paket-Updates laufen atomar: Die bisherige Fassung bleibt bestehen, bis die neue vollständig gelesen wurde. Bricht ein Update ab, bleibt das alte Paket unverändert.</li>
+          <li>Eine Rückmeldung zählt erst als übermittelt, wenn der Server mit <code>{"ok":true}</code> antwortet. Vorher konnte ein Server ohne PHP den Quelltext mit Code 200 ausliefern, und die Meldung war faktisch verloren.</li>
+          <li>Das Demo-Lernpaket ist als Base64 im Programm eingebettet und wird beim Bauen aus der Paketdatei erzeugt.</li>
+          <li>Der Bildzwischenspeicher ist nach Grösse statt nach Anzahl begrenzt (Budget 12 Millionen Bildpunkte, rund 48 MB). Auf iOS werden Bilder neu ebenfalls verkleinert dekodiert.</li>
+          <li>Katalogformat 2. Unbekannte Felder werden weiterhin ignoriert, ältere Versionen können denselben Katalog lesen.</li>
+          <li>Android <code>versionCode</code> 5, iOS <code>CURRENT_PROJECT_VERSION</code> entsprechend. Mindestversion bleibt 1.3.0 – niemand wird zu einem Update gezwungen.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- ===================== 1.3.0 ===================== -->
+  <div class="version">
+    <div class="vkopf">
+      <h2 class="vnr">1.3.0</h2>
+      <span class="vdatum">September 2026</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-plattform">iPhone / iPad · neu</span>
+    </div>
+
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li><b>Erstmals auch für iPhone und iPad.</b> Bis dahin gab es RS:Learn@medi nur für Android.</li>
+        <li><b>Beide Fassungen sind auf demselben Stand</b> und bleiben es – neue Funktionen erscheinen künftig gleichzeitig.</li>
+        <li><b>Hinweis auf neue Versionen</b> beim Start, damit niemand unbemerkt auf einem alten Stand sitzen bleibt.</li>
+      </ul>
+    </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Umbau auf Kotlin Multiplatform mit Compose Multiplatform. Die gesamte Oberfläche liegt im gemeinsamen Code; plattformabhängig sind nur Dateizugriff, Anmeldung, Mitteilungen und Netz-Erkennung.</li>
+          <li>Die iOS-Fassung wird in der Cloud gebaut und über TestFlight verteilt.</li>
+          <li>Der Hinweis auf neue Versionen liest eine statische Datei auf dieser Website. Dabei wird nur die IP-Adresse an den Webhoster übertragen – das steht so auch in der Datenschutzerklärung.</li>
+          <li>Das Lernpaket-Format bleibt unverändert; Pakete aus älteren Versionen funktionieren weiter.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <h2>Frühere Versionen</h2>
+  <p class="fussnote">Die Versionen 1.0 bis 1.2 erschienen ausschliesslich für Android, bevor die App auf den gemeinsamen Unterbau für beide Plattformen umgestellt wurde. Sie enthielten die Grundfunktionen: Import von Lernpaketen, Zusammenfassung, Lernziele, Karteikarten, Prüfungssimulation mit Auswertung und Schweizer Notenskala sowie den Abgleich mit dem privaten Ordner im eigenen Google-Konto.</p>
+
+  <h2>Etwas gefunden?</h2>
+  <p>Fehler und Verbesserungsvorschläge sind willkommen – in der App über das <strong>Melde-Symbol</strong> oder per E-Mail an <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a>. Was bereits bekannt ist, steht unter <a href="bekannte-fehler.html">Bekannte Fehler</a>.</p>
+
+</div></main>
+
+<footer><div class="wrap" style="max-width:820px">
+  <div class="links">
+    <a href="./">RS:Learn@medi</a>
+    <a href="demo.html">Demo</a>
+    <a href="unterstuetzen.html">Unterstützen</a>
+    <a href="releasenotes.html">Release Notes</a>
+    <a href="bekannte-fehler.html">Bekannte Fehler</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+    <a href="../">Alle Apps</a>
+  </div>
+  <div>Kontakt: <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a> · Erstellt mit Claude AI · PhunderDevment</div>
+</div></footer>
+
+</body>
+</html>
