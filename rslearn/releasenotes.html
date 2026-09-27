@@ -80,18 +80,66 @@
 <main><div class="wrap legal">
 
   <h1>Release Notes</h1>
-  <p class="stand">Stand: 22. September 2026 · aktuelle Version 1.4.0</p>
+  <p class="stand">Stand: 27. September 2026 · aktuelle Version 1.4.5</p>
 
   <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
 
-  <!-- ===================== 1.4.0 ===================== -->
+  <!-- ===================== 1.4.5 ===================== -->
   <div class="version aktuell">
+    <div class="vkopf">
+      <h2 class="vnr">1.4.5</h2>
+      <span class="vdatum">27. September 2026</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-aktuell">Aktuell</span>
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-wartet">iPhone / iPad · in Prüfung</span>
+    </div>
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li><b>Weiterfahren statt von vorne.</b> Eine angefangene Übungsrunde geht nicht mehr verloren. Die App merkt sich, wo du warst, und bietet «Weiterfahren · Frage 87 von 412» an. Gespeichert wird nach jeder Frage.</li>
+        <li><b>Meine Fehler.</b> Ein eigener Stapel aus den Fragen, die du beantwortet, aber nicht ganz richtig hattest – getrennt von denen, die du noch nie gesehen hast. Sitzt eine Frage wieder, verschwindet sie daraus.</li>
+        <li><b>Übungsfortschritt zurücksetzen.</b> Für das ganze Lernpaket oder für ein einzelnes Lernziel. Karteikarten, Prüfungsverlauf und gelesene Kapitel bleiben dabei unangetastet.</li>
+        <li><b>Pensum bis zur Prüfung.</b> Mit hinterlegtem Prüfungsdatum rechnet die Übersicht, wie viele Fragen pro Tag noch anstehen – und zeigt, was heute und diese Woche geschafft ist.</li>
+        <li><b>Prüfung pausieren.</b> Kommt ein Einsatz dazwischen, hält der Pausenknopf die Uhr an. Die Frage wird verdeckt, der Stand sofort gespeichert – auch wenn du die App gleich wegwischst. Beim Verlassen fragt die App neu, ob die Zeit weiterlaufen soll.</li>
+        <li><b>Vorzeitig auswerten.</b> Eine Simulation lässt sich abschliessen, bevor du durch bist. Die unbeantworteten Fragen bleiben ganz aussen vor – sie zählen weder als Fehler noch in der erreichbaren Punktzahl. Note und Prozentwert beziehen sich nur auf den bearbeiteten Teil; das ist überall als «vorzeitig» gekennzeichnet.</li>
+        <li><b>Suche im Lernpaket.</b> Neues Lupensymbol: findet einen Begriff in der Zusammenfassung, in den Karteikarten und in den Fragen.</li>
+        <li><b>Karteikarten wischen.</b> Nach rechts gewusst, nach links nochmal. Die Knöpfe bleiben.</li>
+        <li><b>Freundlichere Erinnerung.</b> Die tägliche Erinnerung nennt keine Zahl offener Karten mehr – das las sich nach Rückstand. Jetzt steht dort ein kurzer Anstupser, täglich wechselnd, darunter der Countdown bis zur Prüfung.</li>
+        <li><b>Hinweis auf neue Lernpakete.</b> Liegt in der Bibliothek etwas Neues, sagt es die App beim Start. Abschaltbar, und weiterhin keine Mitteilung aufs Gerät.</li>
+        <li class="fix"><b>Behoben:</b> Hinweisfenster beim Start konnten aufblitzen und sofort wieder verschwinden.</li>
+        <li class="fix"><b>Behoben:</b> Ein entfernter «sicher»-Haken kam beim nächsten Abgleich zurück.</li>
+        <li class="fix"><b>Behoben:</b> In der Bibliothek hiess jedes nicht geladene Paket «Neu» – auch eines vom letzten Semester.</li>
+        <li class="fix"><b>Behoben:</b> Die Restzeit auf der Übersicht einer Vorbereitung stand still, statt mitzulaufen.</li>
+        <li class="fix"><b>Behoben:</b> Eine unterbrochene Prüfungssimulation konnte bei einem Paket-Update im Hintergrund verschwinden.</li>
+        <li class="fix"><b>Behoben:</b> Der Hinweis auf neue Lernpakete konnte Stunden nach dem Start aufspringen – auch mitten in einer laufenden Prüfung.</li>
+      </ul>
+    </div>
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Neue Felder im Lernfortschritt: <code>uebungsRunden</code> (Reihenfolge, Position und Zwischenergebnisse je Auswahl) und <code>hakenStand</code> (Zeitstempel je «sicher»-Haken). Beide abwärtskompatibel – Stände aus 1.4.0 werden unverändert weiterverwendet.</li>
+          <li>Zurückgesetzte Stände werden genullt statt gelöscht, verworfene Runden als leerer Eintrag hinterlegt. Nur so übersteht ein Zurücksetzen den Abgleich zwischen zwei Geräten.</li>
+          <li>«Meine Fehler» = beantwortet und zuletzt nicht vollständig richtig; «Neue» = noch nie beantwortet. Bis 1.4.0 lag beides im selben Filter.</li>
+          <li>Die Suche baut ihren Index einmal je Lernpaket auf und läuft entprellt ausserhalb des Anzeigefadens.</li>
+          <li>Wischgeste über <code>detectHorizontalDragGestures</code> im gemeinsamen Code – auf Android und iPhone identisch. Auslösung ab einem Drittel der Kartenbreite.</li>
+          <li>Die Prüfungssitzung führt neu <code>pauseGesamtMs</code> und <code>pausiertSeitMs</code>; die verbrauchte Zeit wird daraus berechnet statt aus der Wanduhr. Pausen zählen deshalb weder zur Restzeit noch zur benötigten Zeit.</li>
+          <li>Vorzeitige Ergebnisse tragen <code>vorzeitig</code> und <code>uebersprungen</code> und bleiben aus Durchschnittsnote, Gesamtfortschritt und Notenentwicklung heraus.</li>
+          <li>Android <code>versionCode</code> 6, iOS <code>CURRENT_PROJECT_VERSION</code> 6. Mindestversion bleibt 1.3.0 – niemand wird zu einem Update gezwungen.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- ===================== 1.4.0 ===================== -->
+  <div class="version">
     <div class="vkopf">
       <h2 class="vnr">1.4.0</h2>
       <span class="vdatum">22. September 2026</span>
     </div>
     <div class="marken">
-      <span class="marke m-aktuell">Aktuell</span>
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
     </div>
