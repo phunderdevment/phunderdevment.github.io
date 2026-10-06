@@ -94,6 +94,7 @@
       <span class="marke m-aktuell">Aktuell</span>
       <span class="marke m-plattform">Android</span>
       <span class="marke m-wartet">iPhone / iPad · in Prüfung</span>
+      <span class="marke m-plattform">Windows · neu</span>
     </div>
 
     <p style="margin:0 0 16px;color:var(--muted);font-size:.95rem">Diese Version fasst 1.5.0 und 1.5.1 zusammen – 1.5.0 war nur wenige Stunden unterwegs und ist in allem enthalten, was hier steht.</p>
@@ -128,26 +129,40 @@
     </details>
   </div>
 
-  <!-- ===================== In Arbeit ===================== -->
+  <!-- ===================== Fassung für den PC ===================== -->
   <div class="version">
     <div class="vkopf">
       <h2 class="vnr">Fassung für den PC</h2>
-      <span class="vdatum">in Arbeit</span>
+      <span class="vdatum">neu ab 6. Oktober 2026</span>
     </div>
     <div class="marken">
-      <span class="marke m-wartet">Windows · in Planung</span>
+      <span class="marke m-plattform">Windows · verfügbar</span>
     </div>
 
     <div class="wichtig">
-      <h3>Was geplant ist</h3>
+      <h3>Das Wichtigste</h3>
       <ul class="punkte">
         <li><b>Dieselbe App für Windows.</b> Nicht nachgebaut, sondern dasselbe Programm – die ganze Oberfläche ist dieselbe wie auf dem Handy, nur für den grossen Bildschirm eingerichtet.</li>
         <li><b>Abgleich über Google Drive</b> wie auf Handy und Tablet: derselbe Lernfortschritt, derselbe Stand, egal wo du weiterlernst.</li>
         <li><b>Vorlesen</b> über die Sprachausgabe von Windows, ebenfalls mit einstellbarer Geschwindigkeit.</li>
-        <li>Bezug über einen geschützten Bereich; Zugang und Nutzungshinweis gelten wie bisher. Eine Weitergabe bleibt ausgeschlossen.</li>
-        <li><b>Noch kein Termin.</b> Die Fassung läuft, wird aber erst geteilt, wenn sie im Alltag bestanden hat.</li>
+        <li><b>Updates kommen von selbst.</b> Das Programm meldet eine neue Version, lädt sie nach Bestätigung herunter, installiert sie und startet danach wieder – der Lernfortschritt bleibt erhalten.</li>
+        <li><b>Zu finden in der Lernpaket-Bibliothek</b>, im geschützten Bereich. Zugang und Nutzungshinweis gelten wie bisher; eine Weitergabe bleibt ausgeschlossen.</li>
       </ul>
     </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Viertes Ziel im bestehenden Projekt (Compose Multiplatform für die JVM). Plattformabhängig sind nur Dateizugriff, Anmeldung, Sprachausgabe und Netz-Erkennung – die Oberfläche liegt wie bisher im gemeinsamen Code.</li>
+          <li>Ausgeliefert als Installationsdatei für Windows (64-Bit) mit mitgelieferter Laufzeitumgebung. Es muss nichts zusätzlich installiert werden, auch kein Java.</li>
+          <li>Installation nur für das eigene Benutzerkonto, also ohne Administratorrechte. Die Lerndaten liegen im Benutzerprofil, nicht neben dem Programm.</li>
+          <li>Da die Datei keine kostenpflichtige Herstellersignatur trägt, warnt Windows beim ersten Start des Installationsprogramms. Zur Kontrolle wird im geschützten Bereich die Prüfsumme der Datei angezeigt.</li>
+          <li>Das Update prüft vor dem Laden, dass die Adresse zur eigenen Domäne gehört und über HTTPS läuft, folgt keinen Weiterleitungen und installiert nur bei passender Prüfsumme.</li>
+          <li>Noch nicht für macOS und Linux.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 
   <!-- ===================== 1.4.5 ===================== -->
