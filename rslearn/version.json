@@ -1,6 +1,6 @@
 {
   "android": {
-    "neusteVersion": "1.4.5",
+    "neusteVersion": "1.5.1",
     "mindestVersion": "1.4.0",
     "link": "https://play.google.com/store/apps/details?id=ch.rslearn.medi"
   },
@@ -9,6 +9,6 @@
     "mindestVersion": "1.4.0",
     "link": "https://www.phunderdevment.ch/rslearn/"
   },
-  "hinweis": "Neu: Weiterfahren in einer angefangenen Übungsrunde, «Meine Fehler» als eigener Stapel, Prüfung pausieren und vorzeitig auswerten.",
-  "infoUrl": null
+  "hinweis": "Neu: Tippfehler im Lückentext kosten keinen Punkt mehr, Zusammenfassungen lassen sich vorlesen – mit einstellbarer Geschwindigkeit.",
+  "infoUrl": "https://www.phunderdevment.ch/rslearn/releasenotes.html"
 }
