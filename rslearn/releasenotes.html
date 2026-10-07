@@ -87,17 +87,17 @@
   <!-- ===================== 1.5.1 ===================== -->
   <div class="version aktuell">
     <div class="vkopf">
-      <h2 class="vnr">1.5.1</h2>
-      <span class="vdatum">6. Oktober 2026</span>
+      <h2 class="vnr">1.5.2</h2>
+      <span class="vdatum">7. Oktober 2026</span>
     </div>
     <div class="marken">
       <span class="marke m-aktuell">Aktuell</span>
-      <span class="marke m-plattform">Android</span>
-      <span class="marke m-wartet">iPhone / iPad · in Prüfung</span>
+      <span class="marke m-plattform">Android · 1.5.2</span>
+      <span class="marke m-plattform">iPhone / iPad · 1.5.0</span>
       <span class="marke m-plattform">Windows · neu</span>
     </div>
 
-    <p style="margin:0 0 16px;color:var(--muted);font-size:.95rem">Diese Version fasst 1.5.0 und 1.5.1 zusammen – 1.5.0 war nur wenige Stunden unterwegs und ist in allem enthalten, was hier steht.</p>
+    <p style="margin:0 0 16px;color:var(--muted);font-size:.95rem">Diese Version fasst 1.5.0, 1.5.1 und 1.5.2 zusammen – inhaltlich steht alles hier. Der Stand ist je Plattform verschieden: <strong>Android</strong> und <strong>Windows</strong> sind auf 1.5.2, auf <strong>iPhone und iPad</strong> ist 1.5.0 verfügbar – 1.5.1 wurde dort übersprungen, 1.5.2 liegt bei Apple in Prüfung.</p>
 
     <div class="wichtig">
       <h3>Das Wichtigste</h3>
@@ -106,7 +106,7 @@
         <li><b>Wo die Toleranz aufhört, ist Absicht.</b> Bei Zahlen gibt es keine: Eine Dosierung, die um ein Zeichen abweicht, ist keine Vertipper, sondern eine andere Angabe. Kurze Wörter bleiben zeichengenau – «Ileus» und «Ileum» sind zwei verschiedene Dinge. Und nie mehr als ein Zeichen: «Hypokaliämie» und «Hyperkaliämie» unterscheiden sich um genau zwei.</li>
         <li><b>Nachkorrektur von Hand</b> für Lücken, die die App nicht durchlässt – im Übungsmodus steht nach dem Aufdecken «Zählt trotzdem als richtig», in der Prüfungssimulation kommt ein eigener Korrekturbildschirm. Beides umschaltbar, ein Fehlgriff lässt sich zurücknehmen. Eine nachkorrigierte Frage zählt weiterhin als <em>ein</em> Versuch, nicht als zwei.</li>
         <li><b>Zusammenfassungen vorlesen lassen.</b> Im Kapitel oben der Lautsprecher, daneben Pause und Stopp. Neu mit einstellbarer <b>Geschwindigkeit von 0,5× bis 2×</b> – antippbar neben den Knöpfen. Der Wechsel unterbricht nicht. Tabellen werden bewusst nicht vorgelesen, sondern angekündigt.</li>
-        <li><b>Nutzungshinweis beim Start.</b> Einmal beim ersten Start und nach jedem Update, mit Ankreuzfeld. Der Text steht dauerhaft unter <em>Info &amp; Rechtliches</em>.</li>
+        <li><b>Hinweise dort, wo sie hingehören.</b> Beim Start steht nur noch das Wesentliche: RS:Learn@medi ist eine Lernhilfe und kein Nachschlagewerk für den Einsatz. Der Hinweis zur Zweckbindung der Lernpakete erscheint neu erst beim Öffnen der Klassen-Bibliothek – also dann, wenn er tatsächlich gilt. Wer mit eigenen Lernpaketen oder dem Demo-Paket arbeitet, sieht ihn nicht. Beide Hinweise stehen dauerhaft unter <em>Info &amp; Rechtliches</em>.</li>
         <li class="fix"><b>Behoben:</b> Eine leere Lücke löste keinen Korrekturbildschirm mehr aus – eine Frage, die man schlicht nicht gewusst hat, hält die Note nicht offen.</li>
       </ul>
     </div>
@@ -122,8 +122,8 @@
           <li>Vorlesen über <code>TextToSpeech</code> (Android) und <code>AVSpeechSynthesizer</code> (iOS). Der Text wird in Abschnitte zerlegt; «Weiter» setzt am Anfang des laufenden Abschnitts an, weil beide Systeme kein echtes Pausieren kennen.</li>
           <li>Die Geschwindigkeit wird als gemeinsamer Faktor gespeichert (1.0 = normal) und je Plattform umgerechnet – Android direkt, iOS auf <code>AVSpeechUtterance.rate</code>. Sie gilt <strong>je Gerät</strong> und wird nicht abgeglichen.</li>
           <li>Android braucht für die Sprachausgabe neu eine <code>queries</code>-Deklaration für <code>android.intent.action.TTS_SERVICE</code>. Ohne sie findet die App seit Android 11 keinen Sprachmotor.</li>
-          <li>Der Nutzungshinweis merkt sich die <strong>Versionsnummer</strong>, für die bestätigt wurde, nicht einen Schalter – nur so erscheint er nach einem geänderten Text wieder.</li>
-          <li>Android <code>versionCode</code> 8, iOS <code>CURRENT_PROJECT_VERSION</code> 8. Mindestversion 1.4.0 – niemand wird zu einem Update gezwungen.</li>
+          <li>Die Hinweise merken sich die <strong>Versionsnummer</strong>, für die bestätigt wurde, nicht einen Schalter – nur so erscheinen sie nach einem geänderten Text wieder. Start- und Bibliothekshinweis werden getrennt gespeichert und erscheinen unabhängig voneinander.</li>
+          <li>Android <code>versionCode</code> 9, iOS <code>CURRENT_PROJECT_VERSION</code> 9. Mindestversion 1.4.0 – niemand wird zu einem Update gezwungen.</li>
         </ul>
       </div>
     </details>

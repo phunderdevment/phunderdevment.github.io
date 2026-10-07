@@ -1,21 +1,21 @@
 {
   "android": {
-    "neusteVersion": "1.5.1",
+    "neusteVersion": "1.5.2",
     "mindestVersion": "1.4.0",
     "link": "https://play.google.com/store/apps/details?id=ch.rslearn.medi"
   },
   "ios": {
-    "neusteVersion": "1.4.5",
+    "neusteVersion": "1.5.0",
     "mindestVersion": "1.4.0",
     "link": "https://www.phunderdevment.ch/rslearn/"
   },
   "desktop": {
-    "neusteVersion": "1.5.1",
+    "neusteVersion": "1.5.2",
     "mindestVersion": "",
     "link": "https://bibliothek.phunderdevment.ch/pc/",
-    "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-1.5.1.msi",
-    "sha256": "e5c52a630ed81a2b03e835d13dea0462e2ed116e17a2ba3fa785ba4b1013880a"
+    "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-1.5.2.msi",
+    "sha256": "0ca0ea8180ea81eb04d7f34a1edc9d507b804f95f7e2d49119f79aecd48bb37b"
   },
-  "hinweis": "Neu: Tippfehler im Lückentext kosten keinen Punkt mehr, Zusammenfassungen lassen sich vorlesen – mit einstellbarer Geschwindigkeit.",
+  "hinweis": "Neu: Tippfehler im Lückentext kosten keinen Punkt mehr, Zusammenfassungen lassen sich vorlesen – mit einstellbarer Geschwindigkeit. Hinweise erscheinen nur noch dort, wo sie gelten.",
   "infoUrl": "https://www.phunderdevment.ch/rslearn/releasenotes.html"
 }
