@@ -80,11 +80,11 @@
 <main><div class="wrap legal">
 
   <h1>Release Notes</h1>
-  <p class="stand">Stand: 6. Oktober 2026 · aktuelle Version 1.5.1</p>
+  <p class="stand">Stand: 7. Oktober 2026 · aktuelle Version 1.5.2</p>
 
   <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
 
-  <!-- ===================== 1.5.1 ===================== -->
+  <!-- ===================== 1.5.2 ===================== -->
   <div class="version aktuell">
     <div class="vkopf">
       <h2 class="vnr">1.5.2</h2>
@@ -92,22 +92,65 @@
     </div>
     <div class="marken">
       <span class="marke m-aktuell">Aktuell</span>
-      <span class="marke m-plattform">Android · 1.5.2</span>
-      <span class="marke m-plattform">iPhone / iPad · 1.5.0</span>
-      <span class="marke m-plattform">Windows · neu</span>
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-wartet">iPhone / iPad · Prüfung ausstehend</span>
+      <span class="marke m-plattform">Windows</span>
     </div>
 
-    <p style="margin:0 0 16px;color:var(--muted);font-size:.95rem">Diese Version fasst 1.5.0, 1.5.1 und 1.5.2 zusammen – inhaltlich steht alles hier. Der Stand ist je Plattform verschieden: <strong>Android</strong> und <strong>Windows</strong> sind auf 1.5.2, auf <strong>iPhone und iPad</strong> ist 1.5.0 verfügbar – 1.5.1 wurde dort übersprungen, 1.5.2 liegt bei Apple in Prüfung.</p>
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li><b>Hinweise dort, wo sie gelten.</b> Beim Start steht nur noch das Wesentliche: RS:Learn@medi ist eine Lernhilfe zur Prüfungsvorbereitung und kein Nachschlagewerk für den Einsatz.</li>
+        <li><b>Der Hinweis zu den Lernpaketen erscheint neu beim Öffnen der Klassen-Bibliothek</b> – also erst dann, wenn er tatsächlich gilt. Wer mit eigenen Lernpaketen oder dem Demo-Paket arbeitet, bekommt ihn nicht mehr zu sehen. Beide Hinweise stehen weiterhin dauerhaft unter <em>Info &amp; Rechtliches</em>.</li>
+        <li>Sonst unverändert gegenüber 1.5.1. Keine neuen Funktionen, keine geänderten Inhalte.</li>
+      </ul>
+    </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Start- und Bibliothekshinweis werden <strong>getrennt</strong> gespeichert (<code>hinweisAkzeptiertFuer</code> und <code>bibliothekHinweisFuer</code>) und erscheinen unabhängig voneinander, jeweils einmal je App-Version. Wer die Bibliothek nie benutzt, sieht den zweiten nie.</li>
+          <li>Die Sperre sitzt <strong>vor</strong> dem Abruf des Katalogs: Ohne Bestätigung geht keine Anfrage an den Server.</li>
+          <li>Der Text trennt neu ausdrücklich die App von den Inhalten. Beschränkt sind die Lernpakete aus der Bibliothek, nicht das Programm – es öffnet beliebige eigene Lernpakete und bringt ein Demo-Paket mit.</li>
+          <li>Android <code>versionCode</code> 9, iOS <code>CURRENT_PROJECT_VERSION</code> 9. Mindestversion bleibt 1.4.0.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- ===================== 1.5.1 ===================== -->
+  <div class="version">
+    <div class="vkopf">
+      <h2 class="vnr">1.5.1</h2>
+      <span class="vdatum">6. Oktober 2026</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-plattform">Windows · neu</span>
+    </div>
 
     <div class="wichtig">
       <h3>Das Wichtigste</h3>
       <ul class="punkte">
         <li><b>Tippfehler im Lückentext kosten keinen Punkt mehr.</b> Bei längeren Wörtern verzeiht die App ein Zeichen Abweichung von selbst und schreibt «Als Tippfehler gewertet» dazu – nie heimlich. Vertauschte Nachbarbuchstaben wie «Adrenalni» zählen ausdrücklich dazu.</li>
-        <li><b>Wo die Toleranz aufhört, ist Absicht.</b> Bei Zahlen gibt es keine: Eine Dosierung, die um ein Zeichen abweicht, ist keine Vertipper, sondern eine andere Angabe. Kurze Wörter bleiben zeichengenau – «Ileus» und «Ileum» sind zwei verschiedene Dinge. Und nie mehr als ein Zeichen: «Hypokaliämie» und «Hyperkaliämie» unterscheiden sich um genau zwei.</li>
+        <li><b>Wo die Toleranz aufhört, ist Absicht.</b> Bei Zahlen gibt es keine: Eine Dosierung, die um ein Zeichen abweicht, ist kein Vertipper, sondern eine andere Angabe. Kurze Wörter bleiben zeichengenau – «Ileus» und «Ileum» sind zwei verschiedene Dinge. Und nie mehr als ein Zeichen: «Hypokaliämie» und «Hyperkaliämie» unterscheiden sich um genau zwei.</li>
         <li><b>Nachkorrektur von Hand</b> für Lücken, die die App nicht durchlässt – im Übungsmodus steht nach dem Aufdecken «Zählt trotzdem als richtig», in der Prüfungssimulation kommt ein eigener Korrekturbildschirm. Beides umschaltbar, ein Fehlgriff lässt sich zurücknehmen. Eine nachkorrigierte Frage zählt weiterhin als <em>ein</em> Versuch, nicht als zwei.</li>
-        <li><b>Zusammenfassungen vorlesen lassen.</b> Im Kapitel oben der Lautsprecher, daneben Pause und Stopp. Neu mit einstellbarer <b>Geschwindigkeit von 0,5× bis 2×</b> – antippbar neben den Knöpfen. Der Wechsel unterbricht nicht. Tabellen werden bewusst nicht vorgelesen, sondern angekündigt.</li>
-        <li><b>Hinweise dort, wo sie hingehören.</b> Beim Start steht nur noch das Wesentliche: RS:Learn@medi ist eine Lernhilfe und kein Nachschlagewerk für den Einsatz. Der Hinweis zur Zweckbindung der Lernpakete erscheint neu erst beim Öffnen der Klassen-Bibliothek – also dann, wenn er tatsächlich gilt. Wer mit eigenen Lernpaketen oder dem Demo-Paket arbeitet, sieht ihn nicht. Beide Hinweise stehen dauerhaft unter <em>Info &amp; Rechtliches</em>.</li>
+        <li><b>Zusammenfassungen vorlesen lassen.</b> Im Kapitel oben der Lautsprecher, daneben Pause und Stopp. Mit einstellbarer <b>Geschwindigkeit von 0,5× bis 2×</b> – antippbar neben den Knöpfen. Der Wechsel unterbricht nicht. Tabellen werden bewusst nicht vorgelesen, sondern angekündigt.</li>
+        <li><b>Nutzungshinweis beim Start.</b> Einmal beim ersten Start und nach jedem Update, mit Ankreuzfeld. Der Text steht dauerhaft unter <em>Info &amp; Rechtliches</em>.</li>
         <li class="fix"><b>Behoben:</b> Eine leere Lücke löste keinen Korrekturbildschirm mehr aus – eine Frage, die man schlicht nicht gewusst hat, hält die Note nicht offen.</li>
+      </ul>
+    </div>
+
+    <div class="wichtig">
+      <h3>Neu: die Fassung für den PC</h3>
+      <ul class="punkte">
+        <li><b>Dieselbe App für Windows.</b> Nicht nachgebaut, sondern dasselbe Programm – die ganze Oberfläche ist dieselbe wie auf dem Handy, nur für den grossen Bildschirm eingerichtet.</li>
+        <li><b>Abgleich über Google Drive</b> wie auf Handy und Tablet: derselbe Lernfortschritt, derselbe Stand, egal wo du weiterlernst.</li>
+        <li><b>Vorlesen</b> über die Sprachausgabe von Windows, ebenfalls mit einstellbarer Geschwindigkeit.</li>
+        <li><b>Updates kommen von selbst.</b> Das Programm meldet eine neue Version, lädt sie nach Bestätigung herunter, installiert sie und startet danach wieder – der Lernfortschritt bleibt erhalten.</li>
+        <li><b>Zu finden in der Lernpaket-Bibliothek</b>, im geschützten Bereich. Zugang und Nutzungshinweis gelten wie bisher; eine Weitergabe der Lernpakete bleibt ausgeschlossen.</li>
+        <li>Noch nicht für macOS und Linux.</li>
       </ul>
     </div>
 
@@ -119,50 +162,30 @@
           <li>Die Schwellen wurden nicht geschätzt: Der Algorithmus wurde gegen eine vollständige Referenzmatrix über 30'000 Zufallspaare geprüft, danach gegen echte Tippfehlerpaare und gegen verwechselbare Fachbegriffe. «Hypokaliämie»/«Hyperkaliämie» und «intubieren»/«extubieren» haben Abstand 2, «Ileus»/«Ileum» Abstand 1 bei Länge 5 – daraus folgen die beiden Grenzen.</li>
           <li>Nachträglich anerkannte Lücken werden je Ergebnis gespeichert (<code>lueckenKorrigiert</code>), sonst stünde beim nächsten Öffnen der Auswertung wieder die unkorrigierte Note da. Vorgabe leer, Dateien aus 1.4.x bleiben unverändert lesbar.</li>
           <li>Eine strittige Lückentextfrage wird bei der Abgabe bewusst <strong>nicht</strong> in die Fragenstatistik geschrieben – sonst zählte sie zweimal als Versuch. Geschrieben wird sie erst nach der Korrektur.</li>
-          <li>Vorlesen über <code>TextToSpeech</code> (Android) und <code>AVSpeechSynthesizer</code> (iOS). Der Text wird in Abschnitte zerlegt; «Weiter» setzt am Anfang des laufenden Abschnitts an, weil beide Systeme kein echtes Pausieren kennen.</li>
-          <li>Die Geschwindigkeit wird als gemeinsamer Faktor gespeichert (1.0 = normal) und je Plattform umgerechnet – Android direkt, iOS auf <code>AVSpeechUtterance.rate</code>. Sie gilt <strong>je Gerät</strong> und wird nicht abgeglichen.</li>
+          <li>Vorlesen über <code>TextToSpeech</code> (Android), <code>AVSpeechSynthesizer</code> (iOS) und die Sprachausgabe des Systems unter Windows. Der Text wird in Abschnitte zerlegt; «Weiter» setzt am Anfang des laufenden Abschnitts an, weil keines dieser Systeme ein echtes Pausieren kennt.</li>
+          <li>Die Geschwindigkeit wird als gemeinsamer Faktor gespeichert (1.0 = normal) und je Plattform umgerechnet. Sie gilt <strong>je Gerät</strong> und wird nicht abgeglichen.</li>
           <li>Android braucht für die Sprachausgabe neu eine <code>queries</code>-Deklaration für <code>android.intent.action.TTS_SERVICE</code>. Ohne sie findet die App seit Android 11 keinen Sprachmotor.</li>
-          <li>Die Hinweise merken sich die <strong>Versionsnummer</strong>, für die bestätigt wurde, nicht einen Schalter – nur so erscheinen sie nach einem geänderten Text wieder. Start- und Bibliothekshinweis werden getrennt gespeichert und erscheinen unabhängig voneinander.</li>
-          <li>Android <code>versionCode</code> 9, iOS <code>CURRENT_PROJECT_VERSION</code> 9. Mindestversion 1.4.0 – niemand wird zu einem Update gezwungen.</li>
+          <li>Die PC-Fassung ist ein viertes Ziel im bestehenden Projekt (Compose Multiplatform für die JVM). Plattformabhängig sind nur Dateizugriff, Anmeldung, Sprachausgabe und Netz-Erkennung – die Oberfläche liegt wie bisher im gemeinsamen Code.</li>
+          <li>Ausgeliefert als Installationsdatei für Windows (64-Bit) mit mitgelieferter Laufzeitumgebung; es muss nichts zusätzlich installiert werden, auch kein Java. Installation nur für das eigene Benutzerkonto, also ohne Administratorrechte. Die Lerndaten liegen im Benutzerprofil, nicht neben dem Programm.</li>
+          <li>Da die Datei keine kostenpflichtige Herstellersignatur trägt, warnt Windows beim ersten Start des Installationsprogramms. Zur Kontrolle wird im geschützten Bereich die Prüfsumme der Datei angezeigt.</li>
+          <li>Das Update der PC-Fassung prüft vor dem Laden, dass die Adresse zur eigenen Domäne gehört und über HTTPS läuft, folgt keinen Weiterleitungen und installiert nur bei passender Prüfsumme.</li>
+          <li>Android <code>versionCode</code> 8, iOS <code>CURRENT_PROJECT_VERSION</code> 8. Mindestversion 1.4.0 – niemand wird zu einem Update gezwungen.</li>
         </ul>
       </div>
     </details>
   </div>
 
-  <!-- ===================== Fassung für den PC ===================== -->
+  <!-- ===================== 1.5.0 ===================== -->
   <div class="version">
     <div class="vkopf">
-      <h2 class="vnr">Fassung für den PC</h2>
-      <span class="vdatum">neu ab 6. Oktober 2026</span>
+      <h2 class="vnr">1.5.0</h2>
+      <span class="vdatum">6. Oktober 2026</span>
     </div>
     <div class="marken">
-      <span class="marke m-plattform">Windows · verfügbar</span>
+      <span class="marke m-plattform">iPhone / iPad</span>
     </div>
 
-    <div class="wichtig">
-      <h3>Das Wichtigste</h3>
-      <ul class="punkte">
-        <li><b>Dieselbe App für Windows.</b> Nicht nachgebaut, sondern dasselbe Programm – die ganze Oberfläche ist dieselbe wie auf dem Handy, nur für den grossen Bildschirm eingerichtet.</li>
-        <li><b>Abgleich über Google Drive</b> wie auf Handy und Tablet: derselbe Lernfortschritt, derselbe Stand, egal wo du weiterlernst.</li>
-        <li><b>Vorlesen</b> über die Sprachausgabe von Windows, ebenfalls mit einstellbarer Geschwindigkeit.</li>
-        <li><b>Updates kommen von selbst.</b> Das Programm meldet eine neue Version, lädt sie nach Bestätigung herunter, installiert sie und startet danach wieder – der Lernfortschritt bleibt erhalten.</li>
-        <li><b>Zu finden in der Lernpaket-Bibliothek</b>, im geschützten Bereich. Zugang und Nutzungshinweis gelten wie bisher; eine Weitergabe bleibt ausgeschlossen.</li>
-      </ul>
-    </div>
-
-    <details class="technik">
-      <summary>Technische Einzelheiten</summary>
-      <div class="inhalt">
-        <ul>
-          <li>Viertes Ziel im bestehenden Projekt (Compose Multiplatform für die JVM). Plattformabhängig sind nur Dateizugriff, Anmeldung, Sprachausgabe und Netz-Erkennung – die Oberfläche liegt wie bisher im gemeinsamen Code.</li>
-          <li>Ausgeliefert als Installationsdatei für Windows (64-Bit) mit mitgelieferter Laufzeitumgebung. Es muss nichts zusätzlich installiert werden, auch kein Java.</li>
-          <li>Installation nur für das eigene Benutzerkonto, also ohne Administratorrechte. Die Lerndaten liegen im Benutzerprofil, nicht neben dem Programm.</li>
-          <li>Da die Datei keine kostenpflichtige Herstellersignatur trägt, warnt Windows beim ersten Start des Installationsprogramms. Zur Kontrolle wird im geschützten Bereich die Prüfsumme der Datei angezeigt.</li>
-          <li>Das Update prüft vor dem Laden, dass die Adresse zur eigenen Domäne gehört und über HTTPS läuft, folgt keinen Weiterleitungen und installiert nur bei passender Prüfsumme.</li>
-          <li>Noch nicht für macOS und Linux.</li>
-        </ul>
-      </div>
-    </details>
+    <p class="fussnote">Auf Android und Windows war 1.5.0 nur wenige Stunden unterwegs und wurde noch am selben Tag durch 1.5.1 ersetzt – inhaltlich sind die beiden bis auf eine behobene Kleinigkeit identisch, alles dazu steht oben bei 1.5.1. Auf iPhone und iPad ist 1.5.0 die derzeit verfügbare Fassung, weil 1.5.1 dort nicht freigegeben wurde.</p>
   </div>
 
   <!-- ===================== 1.4.5 ===================== -->

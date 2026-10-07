@@ -14,36 +14,39 @@
 </div></header>
 <main><div class="wrap legal">
 <h1>Datenschutzerklärung</h1>
-<p class="muted">Stand: 21. September 2026 · gilt für die App RS:Learn@medi (Android und iOS, ab Version 1.3.0)</p>
+<p class="muted">Stand: 7. Oktober 2026 · gilt für die App RS:Learn@medi auf Android, iPhone/iPad und Computer (Windows; weitere Systeme in Vorbereitung)</p>
 
-<div class="note">Kurz gesagt: Die App zeigt keine Werbung und verwendet keine Analyse- oder Tracking-Tools. Für die Nutzung der App ist keine Registrierung nötig; nur für die Lernpaket-Bibliothek gibt es einen persönlichen Zugang, der ausschliesslich aus Benutzername und Passwort besteht. Dein Lernfortschritt bleibt auf deinem Gerät – und, wenn du die Synchronisation einschaltest, in deinem eigenen Google Drive. Der Entwickler hat darauf keinen Zugriff.</div>
+<div class="note">Kurz gesagt: Die App zeigt keine Werbung und verwendet keine Analyse- oder Tracking-Tools. Für die Nutzung der App ist keine Registrierung nötig; nur für die Lernpaket-Bibliothek gibt es einen persönlichen Zugang, der ausschliesslich aus Benutzername und Passwort besteht. Dein Lernfortschritt bleibt auf deinem Gerät – und, wenn du die Synchronisation einschaltest, in deinem eigenen Google Drive. Der Entwickler hat darauf keinen Zugriff. Für die Fassung auf dem Computer gilt dasselbe, mit zwei Besonderheiten: Sie wird nicht über einen App-Store bezogen, sondern aus dem geschützten Bereich der Bibliothek, und ihr Download wird dort protokolliert (Ziffer 6).</div>
 
 <h2>1. Wer ist verantwortlich?</h2>
 <p>RS:Learn@medi ist ein privates, nicht-kommerzielles Projekt einer Privatperson (nachfolgend «Entwickler»). Diese Datenschutzerklärung richtet sich nach dem Schweizer Bundesgesetz über den Datenschutz (DSG). Sie erklärt, welche Daten bei der Nutzung der App bearbeitet werden, wo sie gespeichert werden und wer darauf Zugriff hat.</p>
 <p><strong>Kontakt in Datenschutzfragen:</strong> <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a></p>
 
 <h2>2. Daten auf deinem Gerät</h2>
-<p>Folgende Daten speichert die App ausschliesslich lokal im geschützten App-Speicher deines Geräts:</p>
+<p>Folgende Daten speichert die App ausschliesslich lokal auf deinem Gerät:</p>
 <ul>
   <li>importierte Lernpakete (Zusammenfassungen, Karteikarten, Fragen, Abbildungen)</li>
   <li>Lernfortschritt, Karteikarten-Stand, Prüfungsresultate, Noten und Verlauf</li>
-  <li>Einstellungen (z.&nbsp;B. Rundung der Note, Uhrzeit der Erinnerung, Archiv)</li>
+  <li>Einstellungen (z.&nbsp;B. Rundung der Note, Uhrzeit der Erinnerung, Archiv, Vorlesegeschwindigkeit)</li>
   <li>Zugangsdaten zur Lernpaket-Bibliothek, falls du solche hinterlegst</li>
   <li>von dir gemeldete Inhalte, solange du sie nicht übermittelt oder gelöscht hast</li>
   <li>technische Hilfsdaten, z.&nbsp;B. Zeitpunkt der letzten Synchronisation, Update-Prüfung oder App-Nutzung</li>
 </ul>
+<p><strong>Auf Handy und Tablet</strong> liegen diese Daten im geschützten App-Speicher, auf den andere Apps nicht zugreifen können.</p>
+<p><strong>Auf dem Computer</strong> liegen sie in deinem Benutzerprofil (unter Windows in <code>%LOCALAPPDATA%\RSLearnMedi</code>). Das ist technisch bedingt kein abgeschotteter Bereich: Programme, die unter demselben Benutzerkonto laufen, könnten diese Dateien lesen. Nutze die PC-Fassung deshalb nur auf einem Rechner, zu dem nur du Zugang hast, und nicht auf einem gemeinsam genutzten Konto.</p>
 <p>Diese Daten werden nicht an den Entwickler übertragen. Sie bleiben gespeichert, bis du sie in der App löschst oder zurücksetzt oder die App deinstallierst. Wenn du ein Backup (ZIP-Datei) exportierst, entscheidest du selbst, wo du diese Datei ablegst oder mit wem du sie teilst.</p>
 
 <h2>3. Lern-Erinnerungen</h2>
-<p>Erinnerungen werden direkt auf deinem Gerät geplant (lokale Benachrichtigungen). Es wird kein Push-Server verwendet. Die Berechtigung für Mitteilungen kannst du jederzeit in den Einstellungen deines Geräts widerrufen.</p>
+<p>Erinnerungen werden direkt auf deinem Gerät geplant (lokale Benachrichtigungen). Es wird kein Push-Server verwendet. Die Berechtigung für Mitteilungen kannst du jederzeit in den Einstellungen deines Geräts widerrufen. <strong>Die PC-Fassung bietet keine Erinnerungen an.</strong></p>
 
 <h2>4. Synchronisation über Google Drive (freiwillig)</h2>
 <p>Wenn du die Synchronisation einschaltest, gilt Folgendes:</p>
 <ul>
-  <li><strong>Anmeldung:</strong> Du meldest dich direkt bei Google an. Die App erhält dein Passwort nie. Sie erhält von Google ein Zugriffstoken, das sicher auf deinem Gerät gespeichert wird.</li>
+  <li><strong>Anmeldung:</strong> Du meldest dich direkt bei Google an. Die App erhält dein Passwort nie. Sie erhält von Google ein Zugriffstoken, das auf deinem Gerät gespeichert wird.</li>
+  <li><strong>Auf dem Computer</strong> läuft die Anmeldung über deinen Browser. Die App startet dafür kurz einen Webserver, der ausschliesslich auf deinem eigenen Rechner erreichbar ist (localhost) und sich nach der Anmeldung sofort wieder beendet. Er ist von aussen nicht ansprechbar. Das Zugriffstoken liegt anschliessend in deinem Benutzerprofil; die Zugriffsrechte werden so weit eingeschränkt, wie das Betriebssystem es zulässt.</li>
   <li><strong>Umfang des Zugriffs:</strong> Die App fragt nur die Berechtigung <code>drive.appdata</code> an. Damit kann sie ausschliesslich in einem versteckten, app-eigenen Ordner in deinem Google Drive lesen und schreiben. Auf deine übrigen Dateien in Google Drive hat die App keinen Zugriff.</li>
-  <li><strong>Welche Daten:</strong> Lernfortschritt, Karteikarten-Stand, Prüfungsresultate und Verlauf, Einstellungen sowie technische Angaben für das Zusammenführen (z.&nbsp;B. Zeitstempel, Lösch- und Zurücksetz-Markierungen).</li>
-  <li><strong>Zweck:</strong> ausschliesslich, damit dein Lernstand auf deinen eigenen Geräten übereinstimmt.</li>
+  <li><strong>Welche Daten:</strong> Lernfortschritt, Karteikarten-Stand, Prüfungsresultate und Verlauf sowie technische Angaben für das Zusammenführen (z.&nbsp;B. Zeitstempel, Lösch- und Zurücksetz-Markierungen). Die Einstellungen werden <strong>nicht</strong> abgeglichen; sie gelten je Gerät.</li>
+  <li><strong>Zweck:</strong> ausschliesslich, damit dein Lernstand auf deinen eigenen Geräten übereinstimmt – auch zwischen Handy und Computer.</li>
   <li><strong>Prüfung der Anmeldung:</strong> Beim Start prüft die App bei Google, ob die Verbindung noch gültig ist, und weist dich darauf hin, falls du dich neu anmelden musst.</li>
   <li><strong>Speicherort:</strong> Die Daten liegen in deinem Google-Konto. Google bearbeitet sie gemäss der <a href="https://policies.google.com/privacy?hl=de">Datenschutzerklärung von Google</a>; Server von Google können sich ausserhalb der Schweiz befinden, insbesondere in den USA.</li>
   <li><strong>Kein Zugriff des Entwicklers:</strong> Die Daten werden nicht an den Entwickler oder an Dritte übermittelt.</li>
@@ -57,28 +60,30 @@
 </ul>
 <h3>Synchronisation beenden und Daten löschen</h3>
 <ul>
-  <li>In der App: Einstellungen › Synchronisation › Verbindung trennen.</li>
+  <li>In der App: Einstellungen › Synchronisation › Verbindung trennen. Dabei wird die Berechtigung bei Google ausdrücklich zurückgezogen, nicht nur lokal vergessen.</li>
   <li>Zugriff der App auf dein Google-Konto entfernen: <a href="https://myaccount.google.com/connections">myaccount.google.com › Drittanbieter-Apps und -Dienste</a>.</li>
   <li>Gespeicherte App-Daten in Google Drive löschen: Google Drive im Browser › Einstellungen › Apps verwalten › RS:Learn@medi › Optionen › «Ausgeblendete App-Daten löschen».</li>
 </ul>
 
-<h2>5. Prüfung auf neue App-Versionen</h2>
+<h2>5. Prüfung auf neue Versionen</h2>
 <p>Beim Start prüft die App höchstens alle 12 Stunden, ob eine neuere Version verfügbar ist. Dazu lädt sie eine kleine Versionsdatei von der Website des Entwicklers. Diese wird über GitHub Pages bereitgestellt (GitHub, Inc., USA). Dabei werden technisch notwendige Verbindungsdaten wie IP-Adresse, Zeitpunkt und allgemeine Geräte- bzw. App-Angaben an GitHub übermittelt. Es werden weder eine Kennung noch Lern- oder Kontodaten gesendet. Ist keine Internetverbindung vorhanden, entfällt die Prüfung.</p>
+<p><strong>Die PC-Fassung kann sich zusätzlich selbst aktualisieren.</strong> Stimmst du zu, lädt sie die neue Installationsdatei aus dem geschützten Bereich der Lernpaket-Bibliothek. Dabei werden deine Bibliothekszugangsdaten an diesen Server übermittelt – und nur an ihn: Die App prüft vorher, dass die hinterlegte Adresse zur Domäne des Entwicklers gehört und über HTTPS läuft, und folgt keinen Weiterleitungen. Installiert wird nur, wenn die Prüfsumme der geladenen Datei stimmt. Ohne deine Zustimmung wird nichts geladen und nichts installiert.</p>
 
-<h2>6. Lernpaket-Bibliothek (falls angeboten)</h2>
-<p>Falls für deine Klasse eine Lernpaket-Bibliothek eingerichtet ist, lädt die App die Paketliste und die ausgewählten Lernpakete verschlüsselt (HTTPS) von einem Webserver mit Standort Schweiz.</p>
+<h2>6. Lernpaket-Bibliothek</h2>
+<p>Die App lädt die Paketliste und die ausgewählten Lernpakete verschlüsselt (HTTPS) von einem Webserver mit Standort Schweiz.</p>
 <ul>
   <li><strong>Zugang:</strong> Du erhältst einen persönlichen Zugang (Benutzername und Passwort) und hinterlegst ihn in den Einstellungen der App. Er wird nur auf deinem Gerät gespeichert und bei jedem Abruf an den Server übermittelt.</li>
   <li><strong>Auf dem Server gespeichert</strong> sind lediglich der Benutzername und ein verschlüsselter Abdruck («Hash») des Passworts. Name, E-Mail-Adresse oder Klasse werden dort nicht hinterlegt.</li>
   <li><strong>Zuordnung:</strong> Wer hinter einem Benutzernamen steht, ist nur dem Entwickler bekannt. Diese Liste wird ausserhalb des Servers geführt und an niemanden weitergegeben.</li>
   <li><strong>Protokolldaten:</strong> Der Webserver speichert übliche Server-Protokolle (IP-Adresse, Zeitpunkt, abgerufene Datei, Benutzername), die nur für Betrieb und Sicherheit verwendet und nach kurzer Zeit gelöscht werden.</li>
+  <li><strong>Download der PC-Fassung:</strong> Lädst du die Installationsdatei über die Downloadseite herunter, werden Zeitpunkt, Benutzername, Versionsnummer, IP-Adresse und die Browserkennung in einer Protokolldatei festgehalten. Zweck ist ausschliesslich der Überblick darüber, wer die Fassung bezogen hat, und die Sicherheit des geschützten Bereichs. Diese Einträge werden spätestens nach 12 Monaten gelöscht, in der Regel früher.</li>
   <li><strong>Automatische Aktualisierung:</strong> Sind Lernpakete auf deinem Gerät, prüft die App höchstens einmal täglich, ob es dazu eine neuere Fassung gibt, und weist dich auf eine Aktualisierung hin. Diese Prüfung kannst du in den Einstellungen abschalten.</li>
 </ul>
 
 <h2>7. Rückmeldungen zu Inhalten (freiwillig)</h2>
-<p>Du kannst Fehler oder Unklarheiten in Lernpaketen melden. Übermittelt werden nur die Angaben zur Meldung: betroffenes Lernpaket und Element, Art der Meldung, dein Kommentar, Zeitpunkt und App-Version. Es werden keine Konto- oder Lerndaten mitgesendet.</p>
+<p>Du kannst Fehler oder Unklarheiten in Lernpaketen melden. Übermittelt werden die Angaben zur Meldung: betroffenes Lernpaket und Element, Art der Meldung, dein Kommentar, Zeitpunkt und App-Version. Lerndaten, Noten und der Inhalt deines Google-Ordners werden <strong>nicht</strong> mitgesendet.</p>
 <ul>
-  <li><strong>Über den Server</strong> (falls eingerichtet): Die Meldung wird an den Webserver der Bibliothek gesendet und nur zur Korrektur der Inhalte verwendet. Sie wird gelöscht, sobald sie bearbeitet ist, spätestens nach 12 Monaten.</li>
+  <li><strong>Über den Server:</strong> Die Meldung wird an den Webserver der Bibliothek gesendet. Weil der Abruf über deinen persönlichen Bibliothekszugang läuft, wird dabei auch dein <strong>Benutzername</strong> festgehalten – so ist nachvollziehbar, von wem eine Meldung stammt, und es können Rückfragen gestellt werden. Eine Kopie der Meldung geht an das Postfach <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a>. Meldung und Kopie werden gelöscht, sobald sie bearbeitet sind, spätestens nach 12 Monaten.</li>
   <li><strong>Als Datei:</strong> Alternativ exportierst du die Meldungen als Datei und teilst sie selbst, z.&nbsp;B. per Messenger. Dafür gelten die Datenschutzbestimmungen des jeweiligen Dienstes.</li>
   <li><strong>Per E-Mail:</strong> Schreibst du an <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a>, werden deine Nachricht und deine Absenderadresse nur zur Bearbeitung deines Anliegens verwendet und danach gelöscht.</li>
 </ul>
@@ -95,23 +100,24 @@
 <h2>9. Öffnen und Teilen von Dateien</h2>
 <p>Wenn du eine Lernpaket- oder Backup-Datei öffnest (z.&nbsp;B. aus einem Messenger oder Dateimanager), wird sie nur lokal auf deinem Gerät verarbeitet.</p>
 
-<h2>10. Verteilung über Google Play und Apple TestFlight</h2>
-<p>Die App wird über Google Play (interner Test) und Apple TestFlight verteilt. Diese Plattformen bearbeiten Daten nach ihren eigenen Datenschutzbestimmungen (<a href="https://policies.google.com/privacy?hl=de">Google</a>, <a href="https://www.apple.com/chde/legal/privacy/">Apple</a>). Im Rahmen der Testphase kann der Entwickler dabei folgende Daten erhalten:</p>
+<h2>10. Verteilung der App</h2>
+<p><strong>Handy und Tablet:</strong> Die App wird über Google Play (interner Test) und Apple TestFlight verteilt. Diese Plattformen bearbeiten Daten nach ihren eigenen Datenschutzbestimmungen (<a href="https://policies.google.com/privacy?hl=de">Google</a>, <a href="https://www.apple.com/chde/legal/privacy/">Apple</a>). Im Rahmen der Testphase kann der Entwickler dabei folgende Daten erhalten:</p>
 <ul>
   <li>die E-Mail-Adresse, mit der du als Testerin oder Tester eingeladen bzw. freigeschaltet wurdest,</li>
   <li>zusammengefasste Statistiken (z.&nbsp;B. Anzahl Installationen, App-Versionen) sowie Absturzberichte,</li>
   <li>Feedback, das du freiwillig über TestFlight sendest (inkl. der damit übermittelten Angaben wie E-Mail-Adresse oder Screenshots).</li>
 </ul>
 <p>Diese Daten werden nur für die Verteilung der App und die Fehlerbehebung verwendet und nicht weitergegeben.</p>
+<p><strong>Computer:</strong> Die PC-Fassung wird <strong>nicht</strong> über einen App-Store verteilt, sondern über den geschützten Bereich der Lernpaket-Bibliothek auf dem Server in der Schweiz. Weder Google noch Apple erfahren etwas über diese Installation. Was dabei protokolliert wird, steht in Ziffer 6.</p>
 
 <h2>11. Website</h2>
 <p>Für den Besuch der Website, auf der diese Erklärung veröffentlicht ist, gilt die <a href="../datenschutz.html">Datenschutzerklärung der Website</a>.</p>
 
 <h2>12. Bekanntgabe ins Ausland</h2>
-<p>Bei der Nutzung von Google Drive, GitHub, Google Play und Apple TestFlight können Daten in Länder ausserhalb der Schweiz übermittelt werden, insbesondere in die USA. Diese Anbieter stützen sich dafür nach eigenen Angaben auf anerkannte Garantien, etwa das Swiss-U.S. Data Privacy Framework oder Standardvertragsklauseln. Die Lernpaket-Bibliothek und die Rückmeldungen laufen über einen Server in der Schweiz.</p>
+<p>Bei der Nutzung von Google Drive, GitHub, Google Play und Apple TestFlight können Daten in Länder ausserhalb der Schweiz übermittelt werden, insbesondere in die USA. Diese Anbieter stützen sich dafür nach eigenen Angaben auf anerkannte Garantien, etwa das Swiss-U.S. Data Privacy Framework oder Standardvertragsklauseln. Die Lernpaket-Bibliothek, die Rückmeldungen und der Download der PC-Fassung laufen über einen Server in der Schweiz.</p>
 
 <h2>13. Datensicherheit</h2>
-<p>Verbindungen der App zu Google, zur Versionsdatei und zur Lernpaket-Bibliothek erfolgen verschlüsselt (HTTPS). Lokale Daten liegen im geschützten Speicherbereich der App, auf den andere Apps nicht zugreifen können.</p>
+<p>Verbindungen der App zu Google, zur Versionsdatei und zur Lernpaket-Bibliothek erfolgen verschlüsselt (HTTPS). Auf Handy und Tablet liegen die lokalen Daten im geschützten Speicherbereich der App, auf den andere Apps nicht zugreifen können; für den Computer gilt die Einschränkung in Ziffer 2.</p>
 
 <h2>14. Deine Rechte</h2>
 <p>Du hast nach dem DSG insbesondere das Recht auf Auskunft, Berichtigung und Löschung deiner Personendaten. Da die App deine Daten auf deinem Gerät und in deinem eigenen Google-Konto speichert, kannst du diese jederzeit selbst einsehen und löschen (siehe Ziffern 2 und 4). Für alles Übrige genügt eine Nachricht an <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a>. Für Daten, die Google, Apple oder GitHub als eigene Verantwortliche bearbeiten, wende dich direkt an diese Anbieter. Du hast zudem das Recht, dich beim <a href="https://www.edoeb.admin.ch">Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB)</a> zu beschweren.</p>
