@@ -80,7 +80,7 @@
 <main><div class="wrap legal">
 
   <h1>Release Notes</h1>
-  <p class="stand">Stand: 7. Oktober 2026 · aktuelle Version 1.5.2</p>
+  <p class="stand">Stand: 8. Oktober 2026 · aktuelle Version 1.5.2</p>
 
   <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
 
@@ -88,13 +88,14 @@
   <div class="version aktuell">
     <div class="vkopf">
       <h2 class="vnr">1.5.2</h2>
-      <span class="vdatum">7. Oktober 2026</span>
+      <span class="vdatum">7. Oktober 2026 · Mac-Fassung 8. Oktober</span>
     </div>
     <div class="marken">
       <span class="marke m-aktuell">Aktuell</span>
       <span class="marke m-plattform">Android</span>
       <span class="marke m-wartet">iPhone / iPad · Prüfung ausstehend</span>
       <span class="marke m-plattform">Windows</span>
+      <span class="marke m-plattform">Mac</span>
     </div>
 
     <div class="wichtig">
@@ -102,6 +103,7 @@
       <ul class="punkte">
         <li><b>Hinweise dort, wo sie gelten.</b> Beim Start steht nur noch das Wesentliche: RS:Learn@medi ist eine Lernhilfe zur Prüfungsvorbereitung und kein Nachschlagewerk für den Einsatz.</li>
         <li><b>Der Hinweis zu den Lernpaketen erscheint neu beim Öffnen der Klassen-Bibliothek</b> – also erst dann, wenn er tatsächlich gilt. Wer mit eigenen Lernpaketen oder dem Demo-Paket arbeitet, bekommt ihn nicht mehr zu sehen. Beide Hinweise stehen weiterhin dauerhaft unter <em>Info &amp; Rechtliches</em>.</li>
+        <li><b>Neu: eine Fassung für den Mac.</b> RS:Learn@medi läuft ab sofort auch auf Macs mit Apple-Chip (M1 und neuer) – mit demselben Funktionsumfang wie am PC und demselben Lernstand, weil der Abgleich über dein Google-Konto läuft. Die Datei liegt im geschützten Bereich der Lernpaket-Bibliothek. Macs mit Intel-Prozessor werden nicht unterstützt.</li>
         <li>Sonst unverändert gegenüber 1.5.1. Keine neuen Funktionen, keine geänderten Inhalte.</li>
       </ul>
     </div>
@@ -114,6 +116,8 @@
           <li>Die Sperre sitzt <strong>vor</strong> dem Abruf des Katalogs: Ohne Bestätigung geht keine Anfrage an den Server.</li>
           <li>Der Text trennt neu ausdrücklich die App von den Inhalten. Beschränkt sind die Lernpakete aus der Bibliothek, nicht das Programm – es öffnet beliebige eigene Lernpakete und bringt ein Demo-Paket mit.</li>
           <li>Android <code>versionCode</code> 9, iOS <code>CURRENT_PROJECT_VERSION</code> 9. Mindestversion bleibt 1.4.0.</li>
+          <li>Die Mac-Fassung entsteht mit jpackage auf einem Mac mini M2 und ist daher <strong>arm64</strong>. Sie ist mit einem Developer-ID-Zertifikat signiert und bei Apple <strong>notarisiert</strong>; das Ticket ist ins <code>.dmg</code> geheftet, Gatekeeper lässt sie also per Doppelklick starten.</li>
+          <li>Das <strong>Selbst-Update gibt es nur unter Windows</strong> (<code>DesktopUpdate.moeglich</code> prüft das Betriebssystem). Auf dem Mac meldet die App eine neue Version und verweist auf die Downloadseite.</li>
         </ul>
       </div>
     </details>
