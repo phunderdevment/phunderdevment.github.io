@@ -24,6 +24,10 @@
   .m-aktuell{background:var(--petrol);color:#fff}
   .m-plattform{background:var(--soft);color:var(--petrol)}
   .m-wartet{background:#fdf0cf;color:#6b4900}
+  /* Hebt eine Plattform hervor, die in dieser Version dazugekommen ist. Markengelb wie
+     die «Neu»-Marke in der Bibliothek; funktioniert in beiden Farbschemata, deshalb
+     keine Dunkel-Variante. */
+  .m-neu{background:#f4b400;color:#1c2a2f}
   @media (prefers-color-scheme:dark){
     .m-plattform{background:#15363e;color:#7cc3d1}
     .m-wartet{background:#3a2f0e;color:#f0c24a}
@@ -95,7 +99,7 @@
       <span class="marke m-plattform">Android</span>
       <span class="marke m-wartet">iPhone / iPad · Prüfung ausstehend</span>
       <span class="marke m-plattform">Windows</span>
-      <span class="marke m-plattform">Mac</span>
+      <span class="marke m-neu">Mac · neu</span>
     </div>
 
     <div class="wichtig">
