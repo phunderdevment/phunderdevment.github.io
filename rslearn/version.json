@@ -1,12 +1,12 @@
 {
   "android": {
     "neusteVersion": "1.5.2",
-    "mindestVersion": "1.4.5",
+    "mindestVersion": "1.5.0",
     "link": "https://play.google.com/store/apps/details?id=ch.rslearn.medi"
   },
   "ios": {
-    "neusteVersion": "1.5.0",
-    "mindestVersion": "1.4.5",
+    "neusteVersion": "1.5.2",
+    "mindestVersion": "1.5.0",
     "link": "https://www.phunderdevment.ch/rslearn/"
   },
   "desktop": {
