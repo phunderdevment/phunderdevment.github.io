@@ -13,8 +13,8 @@
     "neusteVersion": "1.6.0",
     "mindestVersion": "1.6.0",
     "link": "https://bibliothek.phunderdevment.ch/pc/",
-    "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-1.5.2.msi",
-    "sha256": "0ca0ea8180ea81eb04d7f34a1edc9d507b804f95f7e2d49119f79aecd48bb37b"
+    "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-1.6.0.msi",
+    "sha256": "f3eee8a16627fd82e7649ac31286da9b631158ea7b13bfda3cde40caa2082115"
   },
   "hinweis": "Neu: Tippfehler im Lückentext kosten keinen Punkt mehr, Zusammenfassungen lassen sich vorlesen – mit einstellbarer Geschwindigkeit. Hinweise erscheinen nur noch dort, wo sie gelten.",
   "infoUrl": "https://www.phunderdevment.ch/rslearn/releasenotes.html"
