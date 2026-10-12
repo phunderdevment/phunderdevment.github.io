@@ -176,12 +176,20 @@
 
 <script>
 /* ==========================================================================
-   HIER ANPASSEN – das ist die einzige Stelle, die du nachführen musst.
+   Die Zahlen stehen NICHT mehr hier, sondern in  spenden.json  daneben.
+   Grund: Die App liest dieselbe Datei und zeigt denselben Stand an. Wer hier
+   und dort pflegen müsste, hätte früher oder später zwei verschiedene Zahlen.
+
+   Nachführen also ausschliesslich in  spenden.json.
+
+   Der Block unten ist nur die Rückfallebene, falls spenden.json fehlt oder
+   nicht geladen werden kann. Er darf veralten; die Seite sagt dann ehrlich
+   «Stand» von damals.
    ========================================================================== */
-const DATEN = {
+const VORGABE = {
   jahr:         "2026/27",
-  stand:        "01. Oktober 2026",
-  gespendet:    255,            // <-- Summe der eingegangenen Beiträge in CHF
+  stand:        "21. September 2026",
+  gespendet:    0,            // <-- Summe der eingegangenen Beiträge in CHF
 
   posten: [
     { name: "Webhosting und Domain",   betrag: 225, icon: "server",
@@ -196,7 +204,8 @@ const DATEN = {
     { name: "Google-Play-Entwicklerkonto", betrag: 22, hinweis: "einmalig, 2026 bezahlt" }
   ]
 };
-/* ========================================================================== */
+
+const chf = n => "CHF " + n.toLocaleString("de-CH").replace(/’/g, "'");
 
 const ICONS = {
   server:'<path d="M3 5.5h18v5H3zM3 13.5h18v5H3z"/><path d="M6.5 8h.01M6.5 16h.01"/>',
@@ -205,48 +214,60 @@ const ICONS = {
   spark: '<path d="M12 3.2 13.9 9l5.8 1.9-5.8 1.9L12 18.6 10.1 12.8 4.3 10.9 10.1 9z"/><path d="M18.5 3v3M20 4.5h-3"/>'
 };
 
-const chf = n => "CHF " + n.toLocaleString("de-CH").replace(/’/g, "'");
+function zeichne(d) {
+  /* ========================================================================== */
 
-const ziel  = DATEN.posten.reduce((s, p) => s + p.betrag, 0);
-const ist   = Math.max(0, DATEN.gespendet);
-const anteil = ziel > 0 ? Math.min(1, ist / ziel) : 0;
-const rest  = Math.max(0, ziel - ist);
 
-/* --- Fortschritt --- */
-document.getElementById("m-label").textContent = "Laufende Kosten " + DATEN.jahr;
-document.getElementById("m-ist").textContent   = chf(ist);
-document.getElementById("m-soll").textContent  = "von " + chf(ziel) + " zusammengekommen";
-document.getElementById("m-prozent").textContent = Math.round(anteil * 100) + " % gedeckt";
-document.getElementById("m-rest").innerHTML = rest > 0
-  ? "Noch offen: <b>" + chf(rest) + "</b>"
-  : "<b>Ziel erreicht – danke!</b>";
-document.getElementById("stand").textContent = DATEN.stand;
 
-/* --- Kostenbalken (eine Reihe, direkt beschriftet) --- */
-const maxPosten = Math.max(...DATEN.posten.map(p => p.betrag));
-document.getElementById("kosten").innerHTML = DATEN.posten.map(p => {
-  const anteilBar = p.betrag / maxPosten;
-  return '<div class="posten">'
-    + '<span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[p.icon] + '</svg></span>'
-    + '<div>'
-    +   '<div class="posten-kopf"><span class="posten-name">' + p.name + '</span>'
-    +   '<span class="posten-betrag">' + chf(p.betrag) + '</span></div>'
-    +   '<div class="posten-bar"><i data-w="' + (anteilBar * 100) + '"></i></div>'
-    +   '<p class="posten-zweck">' + p.zweck + '</p>'
-    + '</div></div>';
-}).join("");
+  const ziel  = d.posten.reduce((s, p) => s + p.betrag, 0);
+  const ist   = Math.max(0, d.gespendet);
+  const anteil = ziel > 0 ? Math.min(1, ist / ziel) : 0;
+  const rest  = Math.max(0, ziel - ist);
 
-/* --- Tabelle --- */
-document.getElementById("tab").innerHTML =
-    DATEN.posten.map(p => '<tr><td>' + p.name + '</td><td>pro Jahr</td><td class="z">' + chf(p.betrag) + '</td></tr>').join("")
-  + DATEN.einmalig.map(e => '<tr><td>' + e.name + '</td><td>' + e.hinweis + '</td><td class="z">' + chf(e.betrag) + '</td></tr>').join("")
-  + '<tr><td><strong>Ziel dieser Seite</strong></td><td>laufende Kosten pro Jahr</td><td class="z"><strong>' + chf(ziel) + '</strong></td></tr>';
+  /* --- Fortschritt --- */
+  document.getElementById("m-label").textContent = "Laufende Kosten " + d.jahr;
+  document.getElementById("m-ist").textContent   = chf(ist);
+  document.getElementById("m-soll").textContent  = "von " + chf(ziel) + " zusammengekommen";
+  document.getElementById("m-prozent").textContent = Math.round(anteil * 100) + " % gedeckt";
+  document.getElementById("m-rest").innerHTML = rest > 0
+    ? "Noch offen: <b>" + chf(rest) + "</b>"
+    : "<b>Ziel erreicht – danke!</b>";
+  document.getElementById("stand").textContent = d.stand;
 
-/* --- Balken füllen --- */
-requestAnimationFrame(() => {
-  document.getElementById("m-fill").style.width = (anteil * 100) + "%";
-  document.querySelectorAll(".posten-bar i").forEach(i => { i.style.width = i.dataset.w + "%"; });
-});
+  /* --- Kostenbalken (eine Reihe, direkt beschriftet) --- */
+  const maxPosten = Math.max(...d.posten.map(p => p.betrag));
+  document.getElementById("kosten").innerHTML = d.posten.map(p => {
+    const anteilBar = p.betrag / maxPosten;
+    return '<div class="posten">'
+      + '<span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[p.icon] + '</svg></span>'
+      + '<div>'
+      +   '<div class="posten-kopf"><span class="posten-name">' + p.name + '</span>'
+      +   '<span class="posten-betrag">' + chf(p.betrag) + '</span></div>'
+      +   '<div class="posten-bar"><i data-w="' + (anteilBar * 100) + '"></i></div>'
+      +   '<p class="posten-zweck">' + p.zweck + '</p>'
+      + '</div></div>';
+  }).join("");
+
+  /* --- Tabelle --- */
+  document.getElementById("tab").innerHTML =
+      d.posten.map(p => '<tr><td>' + p.name + '</td><td>pro Jahr</td><td class="z">' + chf(p.betrag) + '</td></tr>').join("")
+    + d.einmalig.map(e => '<tr><td>' + e.name + '</td><td>' + e.hinweis + '</td><td class="z">' + chf(e.betrag) + '</td></tr>').join("")
+    + '<tr><td><strong>Ziel dieser Seite</strong></td><td>laufende Kosten pro Jahr</td><td class="z"><strong>' + chf(ziel) + '</strong></td></tr>';
+
+  /* --- Balken füllen --- */
+  requestAnimationFrame(() => {
+    document.getElementById("m-fill").style.width = (anteil * 100) + "%";
+    document.querySelectorAll(".posten-bar i").forEach(i => { i.style.width = i.dataset.w + "%"; });
+  });
+}
+
+/* Zuerst mit der Rückfallebene zeichnen, damit die Seite sofort etwas zeigt –
+   dann mit den echten Zahlen aus spenden.json nachziehen. */
+zeichne(VORGABE);
+fetch("spenden.json", { cache: "no-store" })
+  .then(a => a.ok ? a.json() : Promise.reject(new Error("HTTP " + a.status)))
+  .then(d => { if (d && Array.isArray(d.posten) && d.posten.length) zeichne(d); })
+  .catch(() => { /* ohne Netz bleibt die Rückfallebene stehen */ });
 </script>
 
 </body>

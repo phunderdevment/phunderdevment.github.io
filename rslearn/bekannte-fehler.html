@@ -56,7 +56,7 @@
 <main><div class="wrap legal">
 
   <h1>Bekannte Fehler</h1>
-  <p class="stand">Stand: 10. Oktober 2026</p>
+  <p class="stand">Stand: 12. Oktober 2026</p>
 
   <p>Hier siehst du, welche Fehler bereits gemeldet wurden und woran gearbeitet wird. Wenn dir etwas auffällt, das hier nicht steht: melde es bitte – in der App über das Melde-Symbol oder direkt an die Kontaktadresse unten.</p>
 
@@ -67,9 +67,30 @@
   </div>
 
   <h2>Offen</h2>
-  <p class="leer">Zurzeit sind keine Fehler offen – auf keiner der vier Plattformen. Danke fürs Melden: genau so wird die App besser.</p>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-arbeit">In Arbeit</span>
+      <span class="marke m-plattform">Alle Geräte</span>
+    </div>
+    <h3>Aufzählungen im Lückentext: derselbe Begriff zählt mehrfach</h3>
+    <p>Fragt eine Lückentextfrage nach mehreren verschiedenen Begriffen («Die Trias besteht aus ___, ___ und ___»), akzeptiert jede der Lücken alle richtigen Antworten – damit ist die Reihenfolge der Eingabe beliebig. Wer denselben Begriff dreimal einträgt, bekommt dafür aber bisher drei Punkte.</p>
+    <p>Die App kann das seit Version 1.6.0 richtig bewerten; sie braucht dafür eine Angabe im Lernpaket, welche Lücken zusammengehören. Die bestehenden Lernpakete erhalten diese Angabe nach der laufenden Prüfungsphase – vorher wird an den Paketen nichts geändert, damit sich mitten in der Vorbereitung keine Bewertung verschiebt.</p>
+    <p class="umgehung"><b>Bis dahin</b>Nichts zu tun: Die Bewertung ist eher zu grosszügig als zu streng. Es gehen also keine Punkte verloren.</p>
+  </div>
 
   <h2>Behoben</h2>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 1.6.0</span>
+      <span class="marke m-plattform">Alle Geräte</span>
+    </div>
+    <h3>Zuordnungsfrage wertete eine richtige Antwort als falsch</h3>
+    <p>Kam auf der rechten Seite einer Zuordnungsfrage dieselbe Antwort zweimal vor – etwa zweimal «Blue Bloater» –, verglich die App jedes linke Element mit einem bestimmten Antwort<em>feld</em> statt mit dessen Text. Wer das inhaltlich richtige, aber «andere» Feld wählte, bekam «falsch» und darunter als Lösung genau das, was er gewählt hatte. Das sah wie ein Fehler der App aus, und das war es auch.</p>
+    <p>Seit Version 1.6.0 vergleicht die App den <strong>Text</strong> der gewählten Antwort. Doppelte Antwortfelder sind damit unproblematisch, in der Bewertung wie in der Anzeige. Die betroffene Frage im Lernpaket war schon im Oktober bereinigt worden; jetzt ist auch die App richtig.</p>
+    <p class="umgehung"><b>Gemeldet</b>30. September 2026 über das Melde-Symbol in der App. Vielen Dank!</p>
+  </div>
 
   <div class="eintrag">
     <div class="kopf">

@@ -84,18 +84,60 @@
 <main><div class="wrap legal">
 
   <h1>Release Notes</h1>
-  <p class="stand">Stand: 10. Oktober 2026 · aktuelle Version 1.5.2</p>
+  <p class="stand">Stand: 12. Oktober 2026 · aktuelle Version 1.6.0</p>
 
   <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
 
-  <!-- ===================== 1.5.2 ===================== -->
+  <!-- ===================== 1.6.0 ===================== -->
   <div class="version aktuell">
+    <div class="vkopf">
+      <h2 class="vnr">1.6.0</h2>
+      <span class="vdatum">Android, Windows und Mac 12. Oktober 2026 · iPhone/iPad folgt</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-aktuell">Aktuell</span>
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-wartet">iPhone / iPad</span>
+      <span class="marke m-plattform">Windows</span>
+      <span class="marke m-plattform">Mac</span>
+    </div>
+
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li><b>Neu: der fortlaufende Test.</b> Er arbeitet ein Lernpaket vollständig durch – jede Frage kommt <em>genau einmal</em> dran, verteilt auf Runden, die du selbst gross machst, ohne Zeitlimit. Nach jeder Runde siehst du richtig und falsch je Frage und deinen Zwischenstand; sind alle Fragen durch, entsteht eine Gesamtauswertung mit Note, die wie eine Probeprüfung in deinen Resultaten steht. Angefangene Durchläufe gleichen sich zwischen deinen Geräten ab – eine einzelne Runde beendest du auf dem Gerät, auf dem du sie begonnen hast.</li>
+        <li><b>Warum das nützt:</b> Die Prüfungssimulation zieht jedes Mal neu aus allen Fragen. Bei einem Paket mit 500 Fragen und 20 pro Durchgang hast du nach 25 Durchgängen rund 340 Fragen überhaupt einmal gesehen – manche dreimal, andere nie. Der fortlaufende Test löst das nicht über den Zufall, sondern über die Reihenfolge.</li>
+        <li><b>«10 Minuten üben»</b> – ein Knopf auf der Übersicht, 10 bis 15 Fragen, ohne Einrichten. Gewichtet nach den Fragen, die du zuletzt nicht richtig hattest, und nach denen, die länger nicht dran waren. Für die Viertelstunde zwischen zwei Diensten.</li>
+        <li><b>Einmal: was die App im Jahr kostet.</b> Nach dem zehnten Öffnen erscheint ein Hinweis mit dem aktuellen Stand – wie viel die laufenden Kosten ausmachen und wie viel davon zusammengekommen ist. Einmal, danach nicht wieder; über die Einstellungen lässt er sich ganz abschalten. Bezahlt wird nirgends in der App.</li>
+        <li><b>Behoben: Zuordnungsfragen mit gleichlautenden Antwortfeldern.</b> Kam dieselbe Antwort rechts zweimal vor, wurde eine richtige Zuordnung als falsch gewertet – und darunter stand als Lösung genau das, was man gewählt hatte. Die App vergleicht jetzt den Text der Antwort und nicht mehr ihre Position. Danke fürs Melden.</li>
+      </ul>
+    </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Android <code>versionCode</code> 11, iOS <code>CURRENT_PROJECT_VERSION</code> 11. Die Mindestversionen bleiben unverändert.</li>
+          <li><strong>Fortlaufender Test:</strong> Die Reihenfolge entsteht aus einem Hash über Mischzahl und Fragen-ID – damit kommen alle Geräte zwangsläufig auf dieselbe Folge, und ein Paket-Update reiht neue Fragen ein, ohne die bestehenden zu verschieben. Welche Fragen erledigt sind, wird aus den Rundenergebnissen <em>abgeleitet</em> und nicht gespeichert; der Abgleich braucht deshalb keine neue Konfliktlösung. Landet dieselbe Frage offline in zwei Runden, besitzt sie die ältere.</li>
+          <li>Die Note wird <strong>immer aus der Summe der Punkte</strong> gerechnet, nie aus gemittelten Noten: 20 von 25 und 35 von 50 ergeben 55 von 75 und damit 4.7 – nicht 4.75. Das gilt für den Zwischenstand genauso wie für die Schlussauswertung.</li>
+          <li>Einzelne Runden zählen <strong>nicht</strong> als Prüfungsdurchgang: Sie erscheinen nicht im Prüfungsverlauf und nicht im Notenschnitt. Nur die Schlussauswertung zählt. Damit das auch dann hält, wenn auf einem Gerät noch eine ältere App-Fassung läuft, steckt die Information zusätzlich in der Kennung des Ergebnisses.</li>
+          <li><strong>Lückentext:</strong> Ein Lernpaket kann neu angeben, welche Lücken eine <em>Aufzählung</em> bilden («Die Trias besteht aus ___, ___ und ___»). Dort zählt dann jede Antwort nur einmal, dreimal derselbe Begriff gibt also einen Punkt statt drei. Ohne diese Angabe wird jede Lücke einzeln bewertet – genau wie bisher. Die bestehenden Lernpakete bekommen die Angabe nach der nächsten Prüfungsphase.</li>
+          <li><strong>Zuordnung:</strong> Verglichen wird die Antwort in derselben Form wie beim Lückentext (Gross/klein, Umlaute, Leerzeichen spielen keine Rolle). Ein Distraktor, der wörtlich gleich lautet wie eine richtige Antwort, zählt damit als richtig.</li>
+          <li>Der Hinweis erscheint einmal je Versionslinie: 1.6.1 zeigt ihn nicht erneut, eine künftige 1.7.0 wieder einmal.</li>
+          <li>Der Spendenstand im Hinweis kommt aus <code>spenden.json</code> auf dieser Website – derselben Datei, aus der die Seite «Unterstützen» ihre Zahlen liest. Der Abruf hat ein Zeitlimit von vier Sekunden und wird nie abgewartet: Ohne Netz erscheint der Hinweis ohne Zahlen.</li>
+          <li>Bereits abgeschlossene Durchgänge behalten ihre Note unverändert. Wo die heutige Bewertung zu einem anderen Ergebnis käme, steht in der Auswertung ein Hinweis dazu.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- ===================== 1.5.2 ===================== -->
+  <div class="version">
     <div class="vkopf">
       <h2 class="vnr">1.5.2</h2>
       <span class="vdatum">7. Oktober 2026 · Mac-Fassung 8. Oktober · iPhone/iPad 10. Oktober</span>
     </div>
     <div class="marken">
-      <span class="marke m-aktuell">Aktuell</span>
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
       <span class="marke m-plattform">Windows</span>
