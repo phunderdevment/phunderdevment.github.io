@@ -2,7 +2,7 @@
   "_hinweis": "Die einzige Stelle, an der die Zahlen nachgeführt werden. Gelesen von unterstuetzen.html UND von der App (ab 1.6.0). Felder: jahr, stand, gespendet, posten[].betrag. Das Ziel wird aus den Posten summiert, nicht separat gepflegt.",
   "jahr": "2026/27",
   "stand": "12. Oktober 2026",
-  "gespendet": 0,
+  "gespendet": 255,
   "posten": [
     {
       "name": "Webhosting und Domain",
