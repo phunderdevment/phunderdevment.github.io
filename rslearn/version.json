@@ -1,17 +1,17 @@
 {
   "android": {
     "neusteVersion": "1.7.0",
-    "mindestVersion": "1.6.0",
+    "mindestVersion": "1.7.0",
     "link": "https://play.google.com/store/apps/details?id=ch.rslearn.medi"
   },
   "ios": {
     "neusteVersion": "1.7.0",
-    "mindestVersion": "1.6.0",
+    "mindestVersion": "1.7.0",
     "link": "https://www.phunderdevment.ch/rslearn/"
   },
   "desktop": {
     "neusteVersion": "1.7.0",
-    "mindestVersion": "1.6.0",
+    "mindestVersion": "1.7.0",
     "link": "https://bibliothek.phunderdevment.ch/pc/",
     "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-1.6.0.msi",
     "sha256": "eec875bbc0cd976f8cdc6dabd2008b8b0306f822f994ce9e3e1c132a8222d420"
