@@ -1,6 +1,6 @@
 {
   "android": {
-    "neusteVersion": "1.6.0",
+    "neusteVersion": "1.7.0",
     "mindestVersion": "1.6.0",
     "link": "https://play.google.com/store/apps/details?id=ch.rslearn.medi"
   },
@@ -10,12 +10,12 @@
     "link": "https://www.phunderdevment.ch/rslearn/"
   },
   "desktop": {
-    "neusteVersion": "1.6.0",
+    "neusteVersion": "1.7.0",
     "mindestVersion": "1.6.0",
     "link": "https://bibliothek.phunderdevment.ch/pc/",
     "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-1.6.0.msi",
     "sha256": "f3eee8a16627fd82e7649ac31286da9b631158ea7b13bfda3cde40caa2082115"
   },
-  "hinweis": "Neu: der fortlaufende Test arbeitet ein Lernpaket vollständig durch – jede Frage genau einmal, in Runden deiner Wahl. Dazu «10 Minuten üben» für zwischendurch.",
+  "hinweis": "Neu: Diverse Fehlerbehebungen. Vorlesestimme wurde verbessert.LogIn für Bibliothek wurde überarbeitet.",
   "infoUrl": "https://www.phunderdevment.ch/rslearn/releasenotes.html"
 }
