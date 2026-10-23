@@ -84,18 +84,69 @@
 <main><div class="wrap legal">
 
   <h1>Release Notes</h1>
-  <p class="stand">Stand: 13. Oktober 2026 · aktuelle Version 1.6.0</p>
+  <p class="stand">Stand: 23. Oktober 2026 · aktuelle Version 1.7.0</p>
 
   <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
 
-  <!-- ===================== 1.6.0 ===================== -->
+  <!-- ===================== 1.7.0 ===================== -->
   <div class="version aktuell">
+    <div class="vkopf">
+      <h2 class="vnr">1.7.0</h2>
+      <span class="vdatum">Android, Windows, iPhone/iPad und Mac · 23. Oktober 2026</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-aktuell">Aktuell</span>
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-plattform">iPhone / iPad</span>
+      <span class="marke m-plattform">Windows</span>
+      <span class="marke m-plattform">Mac</span>
+    </div>
+
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li class="fix"><b>Behoben: das Vorlesen klang blechern.</b> Mehrere von euch haben gemeldet, dass die Stimme verzerrt und zu hoch klingt – auf Android und auf dem iPhone. Die Ursache: Android und iOS geben einer App standardmässig die <em>kompakte</em> Stimme einer Sprache, auch wenn eine hochwertige auf dem Gerät installiert ist. Die App sucht sich jetzt selbst die beste installierte deutsche Stimme aus und bevorzugt dabei Schweizer Hochdeutsch. Stimmen, die eine Internetverbindung bräuchten, bleiben aussen vor – vorgelesen wird auch im Funkloch.</li>
+        <li><b>Und wenn gar keine gute Stimme installiert ist,</b> sagt die App das jetzt, statt still schlecht zu klingen – mit dem Weg zur Einstellung, wo sich das bessere Sprachpaket nachladen lässt. Das ist eine Sache des Geräts, nicht der App: Android lädt deutsche Stimmen unter <em>Einstellungen → Sprachausgabe</em> nach, iPhone und iPad unter <em>Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen</em>.</li>
+        <li><b>Schriftgrösse in der Zusammenfassung.</b> Sieben Stufen von 80 % bis 160 %, direkt im Lesebildschirm umschaltbar. Gilt nur fürs Lesen und nur auf diesem Gerät – auf dem Handy liest man anders als am 27-Zoll-Bildschirm.</li>
+        <li><b>Die Bibliothek zeigt auf Wunsch nur deine Phase.</b> In den Einstellungen lässt sich die eigene Ausbildungsphase hinterlegen; die Bibliothek stellt dann nur noch deren Prüfungen dar. <em>Keine</em> Einschränkung: Über «Alle anzeigen» – ein Tipp, gleich oben in der Liste – ist alles wieder da, und bereits geladene Pakete bleiben geladen und bekommen weiter Updates.</li>
+        <li><b>Der Bibliothekszugang kann auf deine Geräte mitwandern.</b> Bisher mussten Benutzername und Passwort auf jedem Gerät einzeln eingetragen werden – und nach einem Passwortwechsel überall neu. Neu geht das über denselben Google-Abgleich wie der Lernfortschritt. <b>Standardmässig ist das aus</b>, denn dabei liegt dein Bibliothekspasswort im Klartext in deinem Google Drive; einschalten lässt es sich in den Einstellungen unter «Lernpaket-Bibliothek», und dort auch wieder löschen. Was das für deine Daten heisst, steht in der <a href="datenschutz.html">Datenschutzerklärung</a>.</li>
+        <li><b>Einmalig: bitte den Bibliothekszugang neu eintragen.</b> Weil das Übertragen auf die eigenen Geräte neu ist und dazu eine ausdrückliche Entscheidung gehört, wird der bisher gespeicherte Zugang mit diesem Update gelöscht. Beim ersten Start kommt ein Fenster, in dem Benutzername und Passwort einmal neu eingetragen werden – mit dem Schalter fürs Übertragen gleich darunter. Das Fenster kommt <em>einmal</em>, nicht nach jedem Update, und es ist keine Pflicht: «Ohne Zugang fortfahren» führt in die App, alles ausser der Klassen-Bibliothek läuft wie bisher, und nachtragen lässt sich der Zugang jederzeit in den Einstellungen.</li>
+        <li><b>Der Zugang wird jetzt sofort geprüft.</b> Stimmen Benutzername oder Passwort nicht, sagt die App das gleich und nimmt die Eingabe nicht an – bisher blieb ein veralteter Zugang still im Gerät liegen und meldete sich erst, wenn ein Paket nicht lud. Ohne Verbindung lässt sich der Zugang trotzdem eintragen; er gilt dann vorerst nur auf diesem Gerät, bis die Prüfung einmal durchgeht.</li>
+        <li><b>Ab dieser Version kann ein Update verbindlich werden.</b> Wenn eine Änderung so tief greift, dass ältere Fassungen nicht mehr sauber mitlaufen, zeigt die App nur noch den Hinweis zum Aktualisieren und lässt sich bis dahin nicht weiter benutzen – so, wie man es von Banking-Apps kennt. Das ist der Boden für die Funktionen, die als Nächstes kommen. <b>Dein Lernfortschritt bleibt dabei vollständig erhalten</b>, und 1.7.0 selbst sperrt niemanden aus: Die Mindestversion bleibt unverändert.</li>
+      </ul>
+    </div>
+
+    <div class="wichtig">
+      <h3>Lernpakete</h3>
+      <ul class="punkte">
+        <li class="fix"><b>Prüfungssimulation Pneumo, Fassung 4:</b> Bei drei Lückentextfragen – Asthma-Trias, NIV-Indikation und den BIG 5 beim Thoraxschmerz – zählte die richtige Antwort in der «falschen» Reihenfolge als falsch. Diese Fragen sind jetzt als Aufzählung gekennzeichnet; die Reihenfolge spielt dort keine Rolle mehr. Dafür zählt derselbe Begriff, zweimal eingetragen, auch nur einmal.</li>
+      </ul>
+    </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Android <code>versionCode</code> 13, iOS <code>CURRENT_PROJECT_VERSION</code> 13. Die Mindestversionen in <code>version.json</code> bleiben unverändert – die Sperre ist eingebaut, aber nicht gesetzt.</li>
+          <li><strong>Update-Sperre:</strong> Die App vergleicht ihre Fassung mit <code>mindestVersion</code> aus <code>version.json</code>. Liegt sie darunter, erscheint nur noch das Sperrfenster. Die geholte Mindestversion wird gemerkt, <em>bevor</em> sie wirkt, und beim nächsten Start auch ohne Netz wiederhergestellt – der Flugmodus ist kein Ausweg. Drei Sicherungen gegen eine falsch gepflegte Datei: Eine Mindestversion über der neusten Version wird verworfen, ohne Vergleichsmassstab wird nicht gesperrt, und gesperrt wird nur, wenn für diese Plattform auch ein Weg nach vorn angegeben ist. Dazu «Erneut prüfen» im Fenster, das den Zwölf-Stunden-Abstand umgeht.</li>
+          <li><strong>Zugangsprüfung:</strong> Geprüft wird mit einem Abruf des Bibliothekskatalogs; nur <code>401</code> und <code>403</code> gelten als falscher Zugang, alles andere als Verbindungsproblem. Geprüft wird mit den <em>eingegebenen</em> Werten, gespeichert erst danach: Ein ungeprüftes Passwort käme bei eingeschaltetem Abgleich sonst in den Drive und verdrängte dort den funktionierenden Zugang der anderen Geräte. Ein ohne Prüfung gespeicherter Zugang bekommt keinen Zeitstempel und wird nicht übertragen.</li>
+          <li><strong>Stimmenwahl:</strong> Auf Android reicht <code>setLanguage</code> nicht – das legt nur die Sprache fest, nicht die Stimme. Gewählt wird jetzt über <code>TextToSpeech.getVoices()</code> nach Qualität, dann Landesvariante (<code>de-CH</code> vor <code>de-DE</code>), dann Name, damit die Wahl auf demselben Gerät immer gleich ausfällt. Stimmen mit <code>isNetworkConnectionRequired</code> oder <code>KEY_FEATURE_NOT_INSTALLED</code> fallen raus. Auf iOS dasselbe über <code>AVSpeechSynthesisVoice.speechVoices()</code> statt <code>AVSpeechSynthesisVoice(language:)</code> – der Aufruf liefert zuverlässig die kompakte Stimme, selbst wenn eine bessere installiert ist.</li>
+          <li><strong>Bibliothekszugang:</strong> liegt als eigene Datei <code>zugang.json</code> im app-eigenen Ordner deines Google Drive – nicht als zusätzliches Feld in einer bestehenden Datei. Grund: Eine ältere App-Fassung liest unbekannte Felder zwar weg, schreibt die Datei aber ohne sie zurück und löscht sie damit still. Eine eigene Datei fasst sie nicht an. Beim Abgleich gewinnt der neuere Eintrag; bei gleichem Zeitpunkt geschieht nichts.</li>
+          <li><strong>Phasenfilter:</strong> ein reiner Anzeigefilter über die Gliederung des Bibliothekskatalogs; am Katalog selbst ändert sich nichts. Die Paketliste bleibt intern vollständig, damit der Zustand bereits geladener Pakete erhalten bleibt, und eine Phase, die es im Katalog nicht gibt, lässt die Bibliothek unverändert – eine Einstellung, die ins Leere zeigt, darf nichts verstecken.</li>
+          <li><strong>Schriftgrösse:</strong> ein Faktor zwischen 0.8 und 1.6 in den Einstellungen, also je Gerät. Ein beschädigter oder unsinniger Wert fällt auf 100 % zurück.</li>
+          <li><code>kotlinx-datetime</code> steht projektweit auf 0.7.1. Bis 1.6.0 lief die PC-Fassung als einzige darauf, alle anderen auf 0.6.2 – übersetzt wurde gegen die alte, ausgeführt gegen die neue Fassung. Das ist bereinigt: eine Version, überall dieselbe.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- ===================== 1.6.0 ===================== -->
+  <div class="version">
     <div class="vkopf">
       <h2 class="vnr">1.6.0</h2>
       <span class="vdatum">Android und Windows 12. Oktober 2026 · iPhone/iPad und Mac 13. Oktober</span>
     </div>
     <div class="marken">
-      <span class="marke m-aktuell">Aktuell</span>
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
       <span class="marke m-plattform">Windows</span>
@@ -117,11 +168,11 @@
       <summary>Technische Einzelheiten</summary>
       <div class="inhalt">
         <ul>
-          <li>Android <code>versionCode</code> 11, iOS <code>CURRENT_PROJECT_VERSION</code> 11. Die Mindestversionen bleiben unverändert.</li>
+          <li>Android <code>versionCode</code> 12, iOS <code>CURRENT_PROJECT_VERSION</code> 12. Die Mindestversionen bleiben unverändert.</li>
           <li><strong>Fortlaufender Test:</strong> Die Reihenfolge entsteht aus einem Hash über Mischzahl und Fragen-ID – damit kommen alle Geräte zwangsläufig auf dieselbe Folge, und ein Paket-Update reiht neue Fragen ein, ohne die bestehenden zu verschieben. Welche Fragen erledigt sind, wird aus den Rundenergebnissen <em>abgeleitet</em> und nicht gespeichert; der Abgleich braucht deshalb keine neue Konfliktlösung. Landet dieselbe Frage offline in zwei Runden, besitzt sie die ältere.</li>
           <li>Die Note wird <strong>immer aus der Summe der Punkte</strong> gerechnet, nie aus gemittelten Noten: 20 von 25 und 35 von 50 ergeben 55 von 75 und damit 4.7 – nicht 4.75. Das gilt für den Zwischenstand genauso wie für die Schlussauswertung.</li>
           <li>Einzelne Runden zählen <strong>nicht</strong> als Prüfungsdurchgang: Sie erscheinen nicht im Prüfungsverlauf und nicht im Notenschnitt. Nur die Schlussauswertung zählt. Damit das auch dann hält, wenn auf einem Gerät noch eine ältere App-Fassung läuft, steckt die Information zusätzlich in der Kennung des Ergebnisses.</li>
-          <li><strong>Lückentext:</strong> Ein Lernpaket kann neu angeben, welche Lücken eine <em>Aufzählung</em> bilden («Die Trias besteht aus ___, ___ und ___»). Dort zählt dann jede Antwort nur einmal, dreimal derselbe Begriff gibt also einen Punkt statt drei. Ohne diese Angabe wird jede Lücke einzeln bewertet – genau wie bisher. Die bestehenden Lernpakete bekommen die Angabe nach der nächsten Prüfungsphase.</li>
+          <li><strong>Lückentext:</strong> Ein Lernpaket kann neu angeben, welche Lücken eine <em>Aufzählung</em> bilden («Die Trias besteht aus ___, ___ und ___»). Dort zählt dann jede Antwort nur einmal, dreimal derselbe Begriff gibt also einen Punkt statt drei. Ohne diese Angabe wird jede Lücke einzeln bewertet – genau wie bisher. Die bestehenden Lernpakete haben die Angabe mit 1.7.0 bekommen.</li>
           <li><strong>Zuordnung:</strong> Verglichen wird die Antwort in derselben Form wie beim Lückentext (Gross/klein, Umlaute, Leerzeichen spielen keine Rolle). Ein Distraktor, der wörtlich gleich lautet wie eine richtige Antwort, zählt damit als richtig.</li>
           <li>Der Hinweis erscheint einmal je Versionslinie: 1.6.1 zeigt ihn nicht erneut, eine künftige 1.7.0 wieder einmal.</li>
           <li>Der Spendenstand im Hinweis kommt aus <code>spenden.json</code> auf dieser Website – derselben Datei, aus der die Seite «Unterstützen» ihre Zahlen liest. Der Abruf hat ein Zeitlimit von vier Sekunden und wird nie abgewartet: Ohne Netz erscheint der Hinweis ohne Zahlen.</li>

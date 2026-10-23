@@ -56,7 +56,7 @@
 <main><div class="wrap legal">
 
   <h1>Bekannte Fehler</h1>
-  <p class="stand">Stand: 12. Oktober 2026</p>
+  <p class="stand">Stand: 23. Oktober 2026</p>
 
   <p>Hier siehst du, welche Fehler bereits gemeldet wurden und woran gearbeitet wird. Wenn dir etwas auffällt, das hier nicht steht: melde es bitte – in der App über das Melde-Symbol oder direkt an die Kontaktadresse unten.</p>
 
@@ -68,18 +68,43 @@
 
   <h2>Offen</h2>
 
-  <div class="eintrag">
-    <div class="kopf">
-      <span class="marke m-arbeit">In Arbeit</span>
-      <span class="marke m-plattform">Alle Geräte</span>
-    </div>
-    <h3>Aufzählungen im Lückentext: derselbe Begriff zählt mehrfach</h3>
-    <p>Fragt eine Lückentextfrage nach mehreren verschiedenen Begriffen («Die Trias besteht aus ___, ___ und ___»), akzeptiert jede der Lücken alle richtigen Antworten – damit ist die Reihenfolge der Eingabe beliebig. Wer denselben Begriff dreimal einträgt, bekommt dafür aber bisher drei Punkte.</p>
-    <p>Die App kann das seit Version 1.6.0 richtig bewerten; sie braucht dafür eine Angabe im Lernpaket, welche Lücken zusammengehören. Die bestehenden Lernpakete erhalten diese Angabe nach der laufenden Prüfungsphase – vorher wird an den Paketen nichts geändert, damit sich mitten in der Vorbereitung keine Bewertung verschiebt.</p>
-    <p class="umgehung"><b>Bis dahin</b>Nichts zu tun: Die Bewertung ist eher zu grosszügig als zu streng. Es gehen also keine Punkte verloren.</p>
-  </div>
+  <p>Zurzeit ist nichts offen. Gemeldete Fehler erscheinen hier, sobald sie bestätigt sind.</p>
 
   <h2>Behoben</h2>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 1.7.0</span>
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-plattform">iPhone / iPad</span>
+    </div>
+    <h3>Die Vorlesestimme klang blechern und zu hoch</h3>
+    <p>Mehrere Rückmeldungen aus der Klasse: Die vorgelesene Zusammenfassung klingt verzerrt, roboterhaft und eine Spur zu hoch – durchgehend, auf Android wie auf dem iPhone, auch über den Gerätelautsprecher.</p>
+    <p>Die Ursache lag nicht bei der Geschwindigkeit oder der Tonhöhe, sondern bei der Stimme selbst: Android und iOS geben einer App standardmässig die <strong>kompakte</strong> Stimme einer Sprache – auch dann, wenn auf dem Gerät eine hochwertige installiert ist. Seit Version 1.7.0 sucht die App selbst die beste installierte deutsche Stimme aus (Schweizer Hochdeutsch bevorzugt) und lässt Stimmen aussen vor, die eine Internetverbindung bräuchten.</p>
+    <p class="umgehung"><b>Wenn es weiterhin blechern klingt</b>Dann ist auf dem Gerät keine bessere Stimme installiert – die App weist jetzt darauf hin. Nachladen lässt sie sich unter Android in den Einstellungen bei «Sprachausgabe», auf iPhone und iPad unter «Bedienungshilfen → Gesprochene Inhalte → Stimmen».</p>
+  </div>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 1.7.0</span>
+      <span class="marke m-plattform">Lernpakete</span>
+    </div>
+    <h3>Aufzählungen im Lückentext: Reihenfolge zählte als Fehler</h3>
+    <p>Fragt eine Lückentextfrage nach mehreren verschiedenen Begriffen («Die Trias besteht aus ___, ___ und ___»), muss jede der Lücken alle richtigen Antworten annehmen – sonst wäre die richtige Antwort in der «falschen» Reihenfolge falsch. Dafür zählte derselbe Begriff, mehrfach eingetragen, auch mehrfach.</p>
+    <p>Die App kann das seit Version 1.6.0 richtig bewerten; sie braucht dafür eine Angabe im Lernpaket, welche Lücken zusammengehören. Diese Angabe ist jetzt nachgetragen. Betroffen war die <strong>Prüfungssimulation Pneumo</strong> (Fassung 4): die Asthma-Trias, die NIV-Indikation und die BIG 5 beim Thoraxschmerz. Die Pakete zu Anatomie &amp; Physiologie III hatten sie bereits.</p>
+    <p class="umgehung"><b>Was sich ändert</b>Die Reihenfolge der Eingabe spielt in diesen Fragen keine Rolle mehr. Derselbe Begriff, zweimal eingetragen, zählt nur noch einmal – angezeigt wird dann «bereits genannt», und die Note eines bereits abgeschlossenen Durchgangs bleibt unverändert.</p>
+  </div>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 1.7.0</span>
+      <span class="marke m-plattform">Alle Geräte</span>
+    </div>
+    <h3>Ein veralteter Bibliothekszugang blieb still im Gerät liegen</h3>
+    <p>Wer nach einem Passwortwechsel den alten Zugang eingetragen liess, merkte davon zunächst nichts: Die App nahm die Eingabe entgegen, ohne sie zu prüfen, und meldete sich erst, wenn ein Lernpaket nicht lud – oft Tage später und mit einer Fehlermeldung, die nach einem Problem der Bibliothek aussah statt nach einem falschen Passwort.</p>
+    <p>Seit Version 1.7.0 wird ein neu eingetragener Zugang sofort geprüft. Stimmt er nicht, sagt die App das gleich und nimmt die Eingabe nicht an – der bisherige Zugang bleibt dabei unverändert stehen. Ist die Bibliothek gerade nicht erreichbar, lässt sich der Zugang trotzdem eintragen; er gilt dann vorerst nur auf diesem Gerät, bis die Prüfung einmal durchgeht.</p>
+    <p class="umgehung"><b>Was zu tun ist</b>Nichts – beim ersten Start nach dem Update fragt die App den Zugang ohnehin einmal neu ab und prüft ihn dabei.</p>
+  </div>
 
   <div class="eintrag">
     <div class="kopf">
