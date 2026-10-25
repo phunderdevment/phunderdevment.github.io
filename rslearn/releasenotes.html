@@ -84,18 +84,60 @@
 <main><div class="wrap legal">
 
   <h1>Release Notes</h1>
-  <p class="stand">Stand: 23. Oktober 2026 · aktuelle Version 1.7.0</p>
+  <p class="stand">Stand: 25. Oktober 2026 · aktuelle Version 1.8.0 · für iPhone und iPad noch in der Prüfung bei Apple</p>
 
   <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
 
-  <!-- ===================== 1.7.0 ===================== -->
+  <!-- ===================== 1.8.0 =====================
+       NOCH OFFEN: Sobald Apple 1.8.0 freigegeben hat, die Marke
+       «iPhone / iPad · folgt» (m-wartet) durch «iPhone / iPad» (m-plattform)
+       ersetzen und in der Stand-Zeile oben den Zusatz zu Apple streichen.
+       ================================================== -->
   <div class="version aktuell">
+    <div class="vkopf">
+      <h2 class="vnr">1.8.0</h2>
+      <span class="vdatum">Android, Windows und Mac · 25. Oktober 2026</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-aktuell">Aktuell</span>
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-wartet">iPhone / iPad · folgt</span>
+      <span class="marke m-plattform">Windows</span>
+      <span class="marke m-plattform">Mac</span>
+    </div>
+
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li><b>Neu: eine Einrichtung in fünf Schritten.</b> Beim ersten Start – und einmal nach diesem Update – führt dich die App durch das Wichtigste: Abgleich mit deinen Geräten, Zugang zur Klassen-Bibliothek, deine Ausbildungsphase und die tägliche Erinnerung. <em>Nichts davon ist Pflicht</em>: Jeder Schritt lässt sich überspringen, der ganze Ablauf auch, und alles ist später in den Einstellungen zu finden. Wer schon alles eingetragen hat, bekommt die Einrichtung gar nicht erst zu sehen.</li>
+        <li><b>Neu: ein kurzer Rundgang.</b> Ein paar Fenster, die zeigen, was die App kann – darunter, wo du <em>das Prüfungsdatum hinterlegst</em>. Danach sortiert die Übersicht nach Dringlichkeit und die Erinnerung weiss, wie viel Zeit bleibt. Der Rundgang wird am Ende der Einrichtung angeboten und lässt sich jederzeit in den Einstellungen unter «Hilfe und Einrichtung» erneut starten.</li>
+        <li class="fix"><b>Behoben: Der Bibliothekszugang wurde auf jedem Gerät einzeln abgefragt.</b> Hast du «Auf meine anderen Geräte übertragen» einmal eingeschaltet, holt sich jedes weitere Gerät den Zugang jetzt selbst – die Abfrage entfällt. Dieselbe Entscheidung gilt ab sofort für alle deine Geräte, auch das Zurücknehmen.</li>
+        <li><b>Deine Ausbildungsphase wandert mit.</b> Phase und der Schalter «Bibliothek nach meiner Phase filtern» gelten jetzt auf allen deinen Geräten, statt auf jedem einzeln eingestellt zu werden. <b>Einmalig nötig:</b> Bitte die Phase nach dem Update einmal neu antippen – sonst bleibt sie auf dem Gerät stehen, auf dem sie steht.</li>
+        <li><b>Neu: «Auf Updates prüfen».</b> In den Einstellungen unter «Hilfe und Einrichtung». Bisher sah die App höchstens alle zwölf Stunden nach; jetzt kannst du es selbst anstossen und bekommst eine Antwort – auch dann, wenn du schon die neuste Fassung hast.</li>
+      </ul>
+    </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Android <code>versionCode</code> 14, iOS <code>CURRENT_PROJECT_VERSION</code> 14. Die Mindestversionen bleiben unverändert.</li>
+          <li><strong>Neue Datei im Abgleich: <code>profil.json</code></strong> im app-eigenen Ordner deines Google Drive – Ausbildungsphase, Phasenfilter und die Einwilligung zum Übertragen des Bibliothekszugangs. Eigene Datei und nicht <code>settings.json</code>: Schriftgrösse, Erinnerungszeit und Vorlesetempo gehören ausdrücklich je Gerät.</li>
+          <li><strong>Ein Zeitstempel je Feld, nicht einer für die Datei.</strong> Damit kann ein Gerät, das eine Angabe nie gesetzt hat, sie auf den anderen Geräten nicht überschreiben – und ein geänderter Filter zieht die Phase nicht mit. Gelesen und geschrieben wird die Datei ausserdem feldweise: Unbekannte Einträge aus einer späteren App-Fassung bleiben unangetastet, statt still gelöscht zu werden.</li>
+          <li><strong>Warum die Phase einmal neu gewählt werden muss:</strong> Wer sie in 1.7.0 gesetzt hat, hat dafür keinen Zeitstempel. Eine Angabe ohne Stempel darf eine bewusst gesetzte nicht verdrängen – also wandert sie erst, wenn sie einmal angetippt wurde.</li>
+          <li>Der Einrichtungs-Ablauf merkt sich seinen Stand in den Einstellungen und nicht nur im Speicher: Die Google-Anmeldung verlässt die App, und auf Android kann das System die Oberfläche in dieser Zeit neu aufbauen.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- ===================== 1.7.0 ===================== -->
+  <div class="version">
     <div class="vkopf">
       <h2 class="vnr">1.7.0</h2>
       <span class="vdatum">Android, Windows, iPhone/iPad und Mac · 23. Oktober 2026</span>
     </div>
     <div class="marken">
-      <span class="marke m-aktuell">Aktuell</span>
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
       <span class="marke m-plattform">Windows</span>
