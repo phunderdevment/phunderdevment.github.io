@@ -1,11 +1,11 @@
 {
   "android": {
-    "neusteVersion": "1.8.0",
+    "neusteVersion": "1.9.0",
     "mindestVersion": "1.7.0",
     "link": "https://play.google.com/store/apps/details?id=ch.rslearn.medi"
   },
   "ios": {
-    "neusteVersion": "1.7.0",
+    "neusteVersion": "1.8.0",
     "mindestVersion": "1.7.0",
     "link": "https://www.phunderdevment.ch/rslearn/"
   },
@@ -16,6 +16,6 @@
     "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-1.8.0.msi",
     "sha256": "341d52d6ecfb134ba267da93f1bcef27389537d23e28baa3a6665f17dceaf69d"
   },
-  "hinweis": "Neu: eine Einrichtung in fünf Schritten und ein kurzer Rundgang durch die App. Der Bibliothekszugang und deine Ausbildungsphase wandern jetzt auf deine anderen Geräte mit – die Abfrage auf jedem Gerät entfällt."
+  "hinweis": "Das Vorlesen klingt auf Android jetzt so, wie es soll – die App sucht die beste Stimme neu über alle Sprachmotoren. Dazu sind die Einstellungen aufgeräumt und jedes Lernpaket hat nur noch ein Menü."
   "infoUrl": "https://www.phunderdevment.ch/rslearn/releasenotes.html"
 }
