@@ -56,7 +56,7 @@
 <main><div class="wrap legal">
 
   <h1>Bekannte Fehler</h1>
-  <p class="stand">Stand: 25. Oktober 2026</p>
+  <p class="stand">Stand: 26. Oktober 2026</p>
 
   <p>Hier siehst du, welche Fehler bereits gemeldet wurden und woran gearbeitet wird. Wenn dir etwas auffällt, das hier nicht steht: melde es bitte – in der App über das Melde-Symbol oder direkt an die Kontaktadresse unten.</p>
 
@@ -71,6 +71,29 @@
   <p>Zurzeit ist nichts offen. Gemeldete Fehler erscheinen hier, sobald sie bestätigt sind.</p>
 
   <h2>Behoben</h2>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 1.9.0</span>
+      <span class="marke m-plattform">Android</span>
+    </div>
+    <h3>Das Vorlesen klang weiterhin blechern – und die App wies nicht darauf hin</h3>
+    <p>Mit 1.7.0 sollte die App selbst die beste installierte deutsche Stimme wählen. Bei einem Teil der Nutzer hat das nichts geändert: Es klang unverändert blechern und zu hoch, und der Hinweis «lade ein besseres Sprachpaket» blieb aus.</p>
+    <p>Die Ursache war eine Ebene höher, als wir gesucht hatten. Android kann mehrere <em>Sprachmotoren</em> installiert haben – etwa den von Google und den von Samsung. Die App hat die beste Stimme gesucht, aber nur innerhalb des als Standard eingestellten Motors. Auf Samsung-Geräten ist das in aller Regel Samsungs eigener, und Googles hochwertige deutsche Stimmen waren damit gar nicht sichtbar. Dass auch kein Hinweis kam, hatte einen zweiten Grund: Er hing an der Qualitätsangabe der Stimme, und die ist eine Selbstauskunft des Sprachmotors – ein Motor, der seine eigene Stimme gut findet, brachte die App zum Schweigen.</p>
+    <p>Seit 1.9.0 sucht die App über <em>alle</em> installierten Sprachmotoren und bevorzugt Google. Schlägt das Setzen der Stimme fehl, erscheint jetzt ein Hinweis, statt still die Vorgabestimme sprechen zu lassen. Und unter Einstellungen → Lernen und Prüfen steht neu, welche Stimme gerade benutzt wird.</p>
+    <p class="umgehung"><b>Was zu tun ist</b>Nichts. Wer den Sprachmotor bereits von Hand auf Google umgestellt hat, kann das so lassen – die App wählt denselben.</p>
+  </div>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 1.9.0</span>
+      <span class="marke m-plattform">Alle Geräte</span>
+    </div>
+    <h3>Der Rundgang beschrieb zwei Knöpfe, die es so nicht gibt</h3>
+    <p>Der mit 1.8.0 eingeführte Rundgang sagte beim Prüfungsdatum: «Tippe auf einer Karte rechts auf ⋮». Auf der Übersichtskarte gibt es aber kein solches Symbol – dort öffnet <em>langes Drücken</em> das Menü. An einer zweiten Stelle war von einem «Aa» für die Schriftgrösse die Rede; der Knopf trägt ein Symbol und keine Beschriftung.</p>
+    <p>Beide Texte sind in 1.9.0 korrigiert. Entstanden sind sie, weil die Texte des Rundgangs geschrieben wurden, bevor die beschriebene Oberfläche endgültig feststand.</p>
+    <p class="umgehung"><b>Was zu tun ist</b>Nichts.</p>
+  </div>
 
   <div class="eintrag">
     <div class="kopf">

@@ -84,18 +84,62 @@
 <main><div class="wrap legal">
 
   <h1>Release Notes</h1>
-  <p class="stand">Stand: 26. Oktober 2026 · aktuelle Version 1.8.0</p>
+  <p class="stand">Stand: 26. Oktober 2026 · aktuelle Version 1.9.0 · für iPhone und iPad noch in der Prüfung bei Apple</p>
 
   <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
 
-  <!-- ===================== 1.8.0 ===================== -->
+  <!-- ===================== 1.9.0 =====================
+       NOCH OFFEN: Sobald Apple 1.9.0 freigegeben hat, die Marke «iPhone / iPad · folgt»
+       (m-wartet) durch «iPhone / iPad» (m-plattform) ersetzen, in der Stand-Zeile oben den
+       Zusatz zu Apple streichen und im Kopf unten «iPhone/iPad» ergänzen.
+       ================================================== -->
   <div class="version aktuell">
+    <div class="vkopf">
+      <h2 class="vnr">1.9.0</h2>
+      <span class="vdatum">Android, Windows und Mac · 26. Oktober 2026</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-aktuell">Aktuell</span>
+      <span class="marke m-plattform">Android</span>
+      <span class="marke m-wartet">iPhone / iPad · folgt</span>
+      <span class="marke m-plattform">Windows</span>
+      <span class="marke m-plattform">Mac</span>
+    </div>
+
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li class="fix"><b>Behoben: Auf vielen Android-Geräten klang das Vorlesen weiterhin blechern – und die App sagte nichts dazu.</b> Die Korrektur aus 1.7.0 hat nur bei einem Teil gewirkt. Der Grund: Die App hat zwar die beste Stimme gesucht, aber nur innerhalb des <em>voreingestellten</em> Sprachmotors. Auf Samsung-Geräten ist das Samsungs eigener; die guten deutschen Stimmen von Google waren für die App unsichtbar. Jetzt sucht sie über alle installierten Sprachmotoren und bevorzugt Google. <b>Du musst nichts umstellen</b> – wer es von Hand getan hat, kann es so lassen.</li>
+        <li><b>Die Einstellungen sind aufgeräumt.</b> Aus einer langen Liste sind neun Bereiche geworden: Synchronisation, Sicherung, Lernpakete und Bibliothek, Lernen und Prüfen, Erinnerung, Rückmeldungen, Die App unterstützen, Hilfe und Einrichtung, Info. Es ist alles noch da, nur findet man es wieder.</li>
+        <li><b>Ein Menü je Lernpaket statt zwei.</b> Bisher gab es auf der Übersicht ein anderes Menü als im geöffneten Lernpaket – mit teils verschiedenen Einträgen. Jetzt ist es überall dasselbe, mit allen sieben Punkten. <em>Die Bedienung ändert sich nicht:</em> auf der Übersicht lange drücken, im Lernpaket die drei Punkte oben rechts.</li>
+        <li><b>Die PC- und Mac-Fassung prüft beim Öffnen auf Updates.</b> Bisher sah sie höchstens alle zwölf Stunden nach – wer die App öffnete, nachdem eine neue Fassung erschienen war, erfuhr es unter Umständen erst am nächsten Tag. Auf dem Handy bleibt es beim bisherigen Abstand; dort melden sich die Stores ohnehin selbst.</li>
+        <li><b>Die Sicherung zeigt, wann du zuletzt gesichert hast.</b> Steht direkt auf der Einstellungs-Übersicht.</li>
+        <li class="fix"><b>Behoben: Zwei Stellen im Rundgang beschrieben Knöpfe, die es so nicht gibt.</b> Der Rundgang verwies auf ein Drei-Punkte-Symbol auf der Übersichtskarte (dort öffnet langes Drücken das Menü) und auf ein «Aa» für die Schriftgrösse (es ist ein Symbol ohne Beschriftung).</li>
+      </ul>
+    </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Android <code>versionCode</code> 15, iOS <code>CURRENT_PROJECT_VERSION</code> 15. Die Mindestversionen bleiben unverändert.</li>
+          <li><strong>Stimmenauswahl:</strong> Die Sprachmotoren werden über den PackageManager ermittelt, nicht über die Vorgabe des Systems. Liefert der bevorzugte Motor kein brauchbares Deutsch, fällt die App einmalig auf die Systemvorgabe zurück. Neu wird auch der Rückgabewert beim Setzen der Stimme ausgewertet – schlägt es fehl, erscheint der Hinweis, statt still die Vorgabestimme sprechen zu lassen.</li>
+          <li><strong>Warum der Hinweis bisher ausblieb:</strong> Er hing allein an der Qualitätsangabe der Stimme – einer Selbstauskunft des Sprachmotors. Stuft ein Motor seine eigene Stimme hoch ein, schwieg die App. Jetzt zählt zusätzlich, von welchem Motor die Stimme stammt.</li>
+          <li><strong>Welche Stimme gewählt wurde, steht jetzt in den Einstellungen</strong> unter «Lernen und Prüfen» – mit Motor, Name und gemeldeter Qualität. Ohne diese Zeile liess sich von aussen nicht erkennen, woran es liegt.</li>
+          <li><strong>Update-Prüfung:</strong> Auf Windows und macOS umgeht der erste Abruf nach dem Programmstart den Zwölf-Stunden-Abstand. Verbraucht wird das erst bei einem geglückten Abruf – sonst verfiele es beim Start ohne Netz.</li>
+          <li>Die Einstellungsseite war auf 869 Zeilen in einer Datei angewachsen und ist in neun eigenständige Bildschirme aufgeteilt.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- ===================== 1.8.0 ===================== -->
+  <div class="version">
     <div class="vkopf">
       <h2 class="vnr">1.8.0</h2>
       <span class="vdatum">Android, Windows, iPhone/iPad und Mac · 25. Oktober 2026</span>
     </div>
     <div class="marken">
-      <span class="marke m-aktuell">Aktuell</span>
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
       <span class="marke m-plattform">Windows</span>
