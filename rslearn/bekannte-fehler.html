@@ -56,7 +56,7 @@
 <main><div class="wrap legal">
 
   <h1>Bekannte Fehler</h1>
-  <p class="stand">Stand: 26. Oktober 2026</p>
+  <p class="stand">Stand: 28. Oktober 2026</p>
 
   <p>Hier siehst du, welche Fehler bereits gemeldet wurden und woran gearbeitet wird. Wenn dir etwas auffällt, das hier nicht steht: melde es bitte – in der App über das Melde-Symbol oder direkt an die Kontaktadresse unten.</p>
 
@@ -71,6 +71,29 @@
   <p>Zurzeit ist nichts offen. Gemeldete Fehler erscheinen hier, sobald sie bestätigt sind.</p>
 
   <h2>Behoben</h2>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 2.0.0</span>
+      <span class="marke m-plattform">Alle Geräte</span>
+    </div>
+    <h3>Beim Nachkorrigieren konnten bereits vergebene Punkte verlorengehen</h3>
+    <p>Wer mitten in der Nachkorrektur das Gerät drehte oder die App kurz verliess, fand sie bei derselben Frage wieder – die vorher eingetragenen Punkte waren aber weg. Die App sagte dazu kein Wort. Wer in dieser Lage die letzte Frage bewertete und abschloss, bekam eine Note, in der die bereits bewerteten Fragen mit null Punkten zählten. Zurück in die Nachkorrektur führt kein Weg, weil das Ergebnis danach abgeschlossen ist.</p>
+    <p>Die Ursache war eine Unstimmigkeit zwischen zwei Arten, Zwischenstände zu merken: Die Fragennummer überlebte den Neuaufbau des Bildschirms, die eingetragenen Zahlen nicht. Dass ausgerechnet die eigenen Entscheidungen verschwanden und die Fragennummer blieb, machte den Fehler unsichtbar – der Bildschirm sah aus, als wäre alles in Ordnung.</p>
+    <p>Seit 2.0.0 gehören Punkte, anerkannte Lücken und Fragennummer zusammen: Entweder überleben sie alle oder keine. Nach einem Neustart der App beginnt die Nachkorrektur von vorn – unbequem, aber die Antworten sind alle noch da, und eine stillschweigend falsche Note ist das Schlechtere.</p>
+    <p class="umgehung"><b>Was zu tun ist</b>Nichts. Wenn dir in der Vergangenheit eine Note zu tief vorkam und du dabei das Gerät gedreht hattest: Das war vermutlich dieser Fehler. Den betroffenen Durchgang kannst du über das Lernpaket-Menü zurücksetzen und neu rechnen lassen.</p>
+  </div>
+
+  <div class="eintrag">
+    <div class="kopf">
+      <span class="marke m-behoben">Behoben in 2.0.0</span>
+      <span class="marke m-plattform">Alle Geräte</span>
+    </div>
+    <h3>Der Hinweis auf die Projektkosten kam immer wieder – und auf jedem Gerät erneut</h3>
+    <p>Der einmalige Hinweis darauf, was das Projekt im Jahr kostet, war an die Versionslinie gebunden: einmal je 1.7er-, 1.8er-, 1.9er-Fassung. Bei vier Versionen in drei Wochen hiess «das steht hier einmal» in Wahrheit viermal. Dazu kam, dass das Merkmal in den Geräteeinstellungen lag und die werden nicht abgeglichen – wer zwei Geräte hat, bekam ihn auf jedem.</p>
+    <p>Seit 2.0.0 erscheint er <strong>ein einziges Mal überhaupt</strong>, und wer ihn auf einem Gerät weggetippt hat, sieht ihn auf keinem weiteren. Dasselbe gilt für «Danke, ich habe schon unterstützt» und für den zuletzt gezeigten Feiertagsgruss. Die Feiertagsgrüsse selbst bleiben.</p>
+    <p class="umgehung"><b>Was zu tun ist</b>Nichts. Wer ihn schon einmal gesehen hat, bekommt ihn mit dem Update nicht noch einmal.</p>
+  </div>
 
   <div class="eintrag">
     <div class="kopf">

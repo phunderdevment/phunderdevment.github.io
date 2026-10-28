@@ -84,9 +84,62 @@
 <main><div class="wrap legal">
 
   <h1>Release Notes</h1>
-  <p class="stand">Stand: 26. Oktober 2026 · aktuelle Version 1.9.0 · für iPhone und iPad noch in der Prüfung bei Apple</p>
+  <p class="stand">Stand: 28. Oktober 2026 · aktuelle Version 1.9.0 · 2.0.0 ist in Vorbereitung</p>
 
   <p>Was sich mit jeder Version geändert hat. Zuoberst steht jeweils das Wichtigste in Alltagssprache – die technischen Einzelheiten lassen sich darunter aufklappen, wer mag.</p>
+
+  <!-- ===================== 2.0.0 =====================
+       NACH DEM ROLLOUT, von Hand:
+       1. Dieser Block: in der Klassenliste des oeffnenden div-Tags «version» zu
+          «version aktuell» ergaenzen, die Marke «In Vorbereitung» (m-wartet) durch
+          «Aktuell» (m-aktuell) ersetzen und je Plattform «· folgt» (m-wartet) auf
+          m-plattform umstellen, sobald sie draussen ist.
+       2. Im 1.9.0-Block darunter die Klasse «aktuell» entfernen und die Marke «Aktuell»
+          loeschen.
+       3. Oben in der Stand-Zeile die Version und das Datum nachziehen.
+       4. index.html: Versionsmarke auf 2.0.0.
+       ================================================== -->
+  <div class="version">
+    <div class="vkopf">
+      <h2 class="vnr">2.0.0</h2>
+      <span class="vdatum">in Vorbereitung</span>
+    </div>
+    <div class="marken">
+      <span class="marke m-wartet">In Vorbereitung</span>
+      <span class="marke m-wartet">Android · folgt</span>
+      <span class="marke m-wartet">iPhone / iPad · folgt</span>
+      <span class="marke m-wartet">Windows · folgt</span>
+      <span class="marke m-wartet">Mac · folgt</span>
+    </div>
+
+    <div class="wichtig">
+      <h3>Das Wichtigste</h3>
+      <ul class="punkte">
+        <li><b>Neu: Freitextantworten lassen sich von einer KI vorbewerten.</b> Nach einer Prüfungssimulation schlägt sie dir je Freitextfrage eine Punktzahl samt kurzer Begründung vor. <b>Die Note kommt weiterhin von dir</b> – der Vorschlag steht daneben, und du übernimmst ihn oder setzt eine andere Zahl. Die Funktion ist <b>freiwillig und standardmässig aus</b>; beim ersten Start nach dem Update wirst du einmal gefragt, und «Nein danke» ist eine ganz normale Antwort. Ändern kannst du es jederzeit unter <em>Einstellungen → Lernen und Prüfen</em>.</li>
+        <li><b>Was dabei übermittelt wird.</b> Frage, Musterlösung, Punkteraster und deine Antwort gehen an den Server des Projekts und von dort an Mistral AI in Frankreich (Verarbeitung in der EU). An Mistral ohne deinen Namen und ohne Kennung; der Projektserver vermerkt für das Wochenkontingent deinen Bibliothek-Benutzernamen. Zum Trainieren von Modellen werden die Daten nicht verwendet. Einzelheiten stehen in der <a href="datenschutz.html">Datenschutzerklärung</a>, Ziffer 7. <b>Schreib in Freitextantworten keine Patienten- oder Einsatzdaten.</b></li>
+        <li><b>Fragen mit Abbildung gehen nicht hinaus.</b> Das Modell sieht keine Bilder – es würde raten. Diese Fragen bewertest du wie bisher selbst.</li>
+        <li class="fix"><b>Behoben: Beim Nachkorrigieren konnten bereits vergebene Punkte verlorengehen.</b> Wer mitten in der Nachkorrektur das Gerät drehte oder die App kurz verliess, fand sie bei derselben Frage wieder – die vorher eingetragenen Punkte waren aber weg, ohne jeden Hinweis. Wer dann abschloss, bekam eine zu tiefe Note. Jetzt überlebt der Zwischenstand vollständig oder gar nicht.</li>
+        <li class="fix"><b>Behoben: Der Hinweis auf die Projektkosten kam immer wieder.</b> Er war an die Versionslinie gebunden und stand nur auf dem jeweiligen Gerät – bei dieser Taktung erschien er alle paar Wochen, und auf jedem Gerät erneut. Jetzt kommt er <b>ein einziges Mal</b>, und wer ihn auf einem Gerät weggetippt hat, sieht ihn auf keinem weiteren. Die Feiertagsgrüsse bleiben.</li>
+        <li><b>Die PC- und Mac-Fassung zeigt das App-Logo</b> in der Fensterleiste statt des Standardsymbols.</li>
+        <li><b>Das Feld für Freitextantworten fasst 6000 Zeichen.</b> Vorher war es unbegrenzt – eine versehentlich eingefügte Textwand liess sich nicht mehr sinnvoll bewerten.</li>
+      </ul>
+    </div>
+
+    <details class="technik">
+      <summary>Technische Einzelheiten</summary>
+      <div class="inhalt">
+        <ul>
+          <li>Android <code>versionCode</code> 16, iOS <code>CURRENT_PROJECT_VERSION</code> 16. Die Mindestversionen bleiben unverändert (1.7.0).</li>
+          <li><strong>Modell:</strong> <code>ministral-8b-latest</code> bei Mistral AI, Verarbeitung in der EU, Auftragsverarbeitungsvertrag vorhanden, Trainings-Opt-out gesetzt. Ausgewählt nach einem Vergleich an 37 echten Prüfungsantworten: gleiche Genauigkeit wie das grössere Modell, aber unempfindlich gegen Anweisungen, die im Antworttext versteckt sind.</li>
+          <li><strong>Die Punktzahl wird zweimal unabhängig geprüft</strong> – auf dem Server und in der App. Alles ausserhalb von 0 bis zur Maximalpunktzahl und ausserhalb des 0.5er-Rasters wird verworfen, statt gerundet. Eine im Antworttext versteckte Anweisung («volle Punktzahl») erreicht die Note damit nicht.</li>
+          <li><strong>Wochenkontingent:</strong> 400 Bewertungen je Zugang und Kalenderwoche, dazu ein Gesamtbudget über alle Zugänge. Gezählt wird, <em>bevor</em> das Modell gefragt wird; zurückgebucht nur, wenn der Anbieter gar nicht geantwortet hat.</li>
+          <li><strong>Zu lange Frage, Musterlösung oder Antwort werden abgelehnt, nicht gekürzt.</strong> Eine stillschweigend abgeschnittene Musterlösung ergäbe einen zu tiefen Vorschlag mit plausibel klingender Begründung.</li>
+          <li><strong>Hinweis auf die Projektkosten:</strong> Das Merkmal liegt neu in <code>profil.json</code> und wird mit dem Abgleich übertragen – zusammen mit «schon unterstützt» und dem zuletzt gezeigten Feiertagsgruss. Bisher stand es je Gerät in den Einstellungen, die nicht abgeglichen werden.</li>
+          <li><strong>Abgleich:</strong> Zeitstempel, die mehr als zwei Tage in der Zukunft liegen, werden verworfen. Ein Gerät mit falsch gestellter Uhr konnte ein Profilfeld sonst dauerhaft einfrieren – jeder spätere, richtige Stempel ist kleiner und hätte verloren.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
 
   <!-- ===================== 1.9.0 =====================
        NOCH OFFEN: Sobald Apple 1.9.0 freigegeben hat, die Marke «iPhone / iPad · folgt»

@@ -14,7 +14,7 @@
 </div></header>
 <main><div class="wrap legal">
 <h1>Datenschutzerklärung</h1>
-<p class="muted">Stand: 26. Oktober 2026 · gilt für die App RS:Learn@medi auf Android, iPhone/iPad und Computer (Windows und macOS)</p>
+<p class="muted">Stand: 28. Oktober 2026 · gilt für die App RS:Learn@medi auf Android, iPhone/iPad und Computer (Windows und macOS)</p>
 
 <div class="note">Kurz gesagt: Die App zeigt keine Werbung und verwendet keine Analyse- oder Tracking-Tools. Für die Nutzung der App ist keine Registrierung nötig; nur für die Lernpaket-Bibliothek gibt es einen persönlichen Zugang, der ausschliesslich aus Benutzername und Passwort besteht. Dein Lernfortschritt bleibt auf deinem Gerät – und, wenn du die Synchronisation einschaltest, in deinem eigenen Google Drive; ab Version 1.7.0 auf ausdrücklichen Wunsch auch der Zugang zur Bibliothek (Ziffer 4), der dafür einmalig neu einzutragen ist (Ziffer 6), und ab 1.8.0 einige Grundeinstellungen wie die Ausbildungsphase (Ziffer 4). Ebenfalls ab 1.7.0 kann ein Update verbindlich sein: Unterhalb einer Mindestversion zeigt die App nur noch den Hinweis zum Aktualisieren (Ziffer 5). Der Entwickler hat darauf keinen Zugriff. Für die Fassungen auf dem Computer (Windows und macOS) gilt dasselbe, mit zwei Besonderheiten: Sie werden nicht über einen App-Store bezogen, sondern aus dem geschützten Bereich der Bibliothek, und ihr Download wird dort protokolliert (Ziffer 6).</div>
 
@@ -46,7 +46,7 @@
   <li><strong>Auf dem Computer</strong> läuft die Anmeldung über deinen Browser. Die App startet dafür kurz einen Webserver, der ausschliesslich auf deinem eigenen Rechner erreichbar ist (localhost) und sich nach der Anmeldung sofort wieder beendet. Er ist von aussen nicht ansprechbar. Das Zugriffstoken liegt anschliessend in deinem Benutzerprofil; die Zugriffsrechte werden so weit eingeschränkt, wie das Betriebssystem es zulässt.</li>
   <li><strong>Umfang des Zugriffs:</strong> Die App fragt nur die Berechtigung <code>drive.appdata</code> an. Damit kann sie ausschliesslich in einem versteckten, app-eigenen Ordner in deinem Google Drive lesen und schreiben. Auf deine übrigen Dateien in Google Drive hat die App keinen Zugriff.</li>
   <li><strong>Welche Daten:</strong> Lernfortschritt, Karteikarten-Stand, Prüfungsresultate und Verlauf sowie technische Angaben für das Zusammenführen (z.&nbsp;B. Zeitstempel, Lösch- und Zurücksetz-Markierungen). Die Einstellungen werden <strong>nicht</strong> abgeglichen; sie gelten je Gerät.</li>
-  <li><strong>Seit Version 1.8.0 einige Grundeinstellungen</strong> – deine Ausbildungsphase, ob die Bibliothek danach gefiltert wird, und deine Entscheidung zum Punkt darunter. Sie liegen als eigene Datei <code>profil.json</code> im app-eigenen Ordner. Die übrigen Einstellungen – Schriftgrösse, Uhrzeit der Erinnerung, Vorlesetempo – werden weiterhin <strong>nicht</strong> abgeglichen und gelten je Gerät.</li>
+  <li><strong>Seit Version 1.8.0 einige Grundeinstellungen</strong> – deine Ausbildungsphase, ob die Bibliothek danach gefiltert wird, und deine Entscheidung zum Punkt darunter. <strong>Seit Version 2.0.0 zusätzlich deine Entscheidung zur KI-Vorbewertung</strong> (Ziffer 7) samt dem Vermerk, dass die Frage bereits gestellt wurde, sowie der Merker für den einmaligen Hinweis auf die Projektkosten. Sie liegen als eigene Datei <code>profil.json</code> im app-eigenen Ordner. Die übrigen Einstellungen – Schriftgrösse, Uhrzeit der Erinnerung, Vorlesetempo – werden weiterhin <strong>nicht</strong> abgeglichen und gelten je Gerät.</li>
   <li><strong>Seit Version 1.7.0 auf Wunsch zusätzlich der Zugang zur Lernpaket-Bibliothek</strong> – Benutzername und Passwort –, damit er nicht auf jedem Gerät einzeln eingetragen werden muss. Dieser Schalter ist <strong>standardmässig ausgeschaltet</strong>; ohne ihn bleibt es wie bisher. Wer ihn einschaltet, legt den Zugang als eigene Datei <code>zugang.json</code> im app-eigenen Ordner seines Google Drive ab, und zwar <strong>im Klartext</strong>: Ihn mit einem Schlüssel aus der App zu verschlüsseln wäre Augenwischerei, denn dieser Schlüssel liesse sich aus der App auslesen. Ausschalten geht in den Einstellungen unter «Zugang auf meine Geräte übertragen»; danach erscheint dort ein Knopf, der die Datei wieder aus dem Drive löscht. <strong>Seit Version 1.8.0 gilt diese Entscheidung für alle deine Geräte</strong> – sie wird mit <code>profil.json</code> übertragen, damit nicht jedes Gerät einzeln danach fragen muss. Das Zurücknehmen wirkt ebenso überall. In die <strong>Sicherung</strong> (Datei-Export) kommt der Zugang nach wie vor nicht.</li>
   <li><strong>Zweck:</strong> ausschliesslich, damit dein Lernstand auf deinen eigenen Geräten übereinstimmt – auch zwischen Handy und Computer.</li>
   <li><strong>Prüfung der Anmeldung:</strong> Beim Start prüft die App bei Google, ob die Verbindung noch gültig ist, und weist dich darauf hin, falls du dich neu anmelden musst.</li>
@@ -87,7 +87,21 @@
   <li><strong>Automatische Aktualisierung:</strong> Sind Lernpakete auf deinem Gerät, prüft die App höchstens einmal täglich, ob es dazu eine neuere Fassung gibt, und weist dich auf eine Aktualisierung hin. Diese Prüfung kannst du in den Einstellungen abschalten.</li>
 </ul>
 
-<h2>7. Rückmeldungen zu Inhalten (freiwillig)</h2>
+<h2>7. KI-Vorbewertung von Freitextantworten (freiwillig, ab Version 2.0.0)</h2>
+<p>Nach einer Prüfungssimulation oder einer Runde des fortlaufenden Tests kann die App für deine <strong>Freitextantworten</strong> einen Bewertungsvorschlag einholen. Diese Funktion ist <strong>standardmässig ausgeschaltet</strong> und läuft erst, nachdem du ihr ausdrücklich zugestimmt hast.</p>
+<ul>
+  <li><strong>Was übermittelt wird:</strong> die Prüfungsfrage, die Musterlösung, das Punkteraster der Frage (sofern im Lernpaket hinterlegt), die Maximalpunktzahl und deine selbst geschriebene Antwort. <strong>Nicht</strong> übermittelt werden dein Name, eine Geräte- oder Nutzerkennung, die Frage- oder Paket-ID, dein Lernfortschritt, deine Noten oder deine übrigen Antworten. Fragen mit einer Abbildung werden gar nicht erst eingeschickt.</li>
+  <li><strong>Wohin:</strong> zuerst verschlüsselt (HTTPS) an denselben Webserver in der Schweiz, auf dem die Lernpaket-Bibliothek liegt, und von dort an <strong>Mistral AI</strong> (Paris, Frankreich). Die Verarbeitung findet in der EU statt. Mit dem Anbieter besteht ein Auftragsverarbeitungsvertrag.</li>
+  <li><strong>Beim Anbieter:</strong> Für das Konto des Projekts ist die Verwendung der Daten zum Trainieren von Modellen <strong>abgeschaltet</strong>. Zur Erkennung von Missbrauch speichert der Anbieter Anfragen nach eigenen Angaben befristet.</li>
+  <li><strong>Auf dem Projektserver:</strong> Deine Antwort wird dort <strong>nicht gespeichert</strong> – sie wird nur weitergereicht. Festgehalten wird ausschliesslich ein Zähler je Benutzername und Kalenderwoche, damit das Wochenkontingent eingehalten wird; diese Zählerdateien werden nach spätestens sechs Wochen gelöscht. Weil der Abruf über deinen persönlichen Bibliothekszugang läuft, erscheint dein <strong>Benutzername</strong> zusätzlich in den üblichen Server-Protokollen (Ziffer 6). Gegenüber Mistral AI bleibst du dagegen namenlos.</li>
+  <li><strong>Rechtsgrundlage:</strong> deine Einwilligung. Du erteilst sie in einem eigenen Schritt der Einrichtung, in dem «Nein danke» gleichwertig neben «Ja, gerne» steht und nichts vorausgewählt ist.</li>
+  <li><strong>Widerruf:</strong> jederzeit unter <em>Einstellungen → Lernen und Prüfen</em>. Ab dann verlässt keine Antwort mehr das Gerät. Die Einwilligung gilt für alle deine Geräte und wird – wenn du den Abgleich nutzt – über Google Drive mit übertragen (Ziffer 4); auch der Widerruf wirkt dadurch überall.</li>
+  <li><strong>Keine automatisierte Entscheidung:</strong> Was zurückkommt, ist ein <strong>Vorschlag</strong> mit einer kurzen Begründung. Die Punktzahl trägst in jedem Fall du selbst ein; ohne dein Zutun fliesst kein Wert in eine Note. Es findet damit keine automatisierte Einzelentscheidung im Sinne des Datenschutzrechts statt.</li>
+  <li><strong>Unterrichtsmaterial:</strong> Mit Frage und Musterlösung verlassen auch Inhalte des jeweiligen Lernpakets das Gerät. Die Verantwortung dafür liegt beim Betreiber des Projekts, nicht bei dir.</li>
+</ul>
+<p><strong>Bitte schreibe keine Patienten- oder Einsatzdaten in Freitextantworten.</strong> Was du dort hineinschreibst, wird bei eingeschalteter Vorbewertung mitübermittelt.</p>
+
+<h2>8. Rückmeldungen zu Inhalten (freiwillig)</h2>
 <p>Du kannst Fehler oder Unklarheiten in Lernpaketen melden. Übermittelt werden die Angaben zur Meldung: betroffenes Lernpaket und Element, Art der Meldung, dein Kommentar, Zeitpunkt und App-Version. Lerndaten, Noten und der Inhalt deines Google-Ordners werden <strong>nicht</strong> mitgesendet.</p>
 <ul>
   <li><strong>Über den Server:</strong> Die Meldung wird an den Webserver der Bibliothek gesendet. Weil der Abruf über deinen persönlichen Bibliothekszugang läuft, wird dabei auch dein <strong>Benutzername</strong> festgehalten – so ist nachvollziehbar, von wem eine Meldung stammt, und es können Rückfragen gestellt werden. Eine Kopie der Meldung geht an das Postfach <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a>. Meldung und Kopie werden gelöscht, sobald sie bearbeitet sind, spätestens nach 12 Monaten.</li>
@@ -96,7 +110,7 @@
 </ul>
 <p><strong>Bitte schreibe keine Personendaten in Kommentare – insbesondere keine Angaben zu Patientinnen und Patienten.</strong></p>
 
-<h2>8. Freiwillige Unterstützung</h2>
+<h2>9. Freiwillige Unterstützung</h2>
 <p>Die App ist kostenlos. Auf der Seite <a href="unterstuetzen.html">Unterstützen</a> ist offengelegt, welche Kosten der Betrieb verursacht; ein freiwilliger Beitrag ist möglich, aber nie Voraussetzung für die Nutzung.</p>
 <ul>
   <li>Die Zahlung läuft <strong>ausserhalb der App</strong> direkt über TWINT. Dabei erhält der Entwickler – wie bei jeder TWINT-Zahlung – die Angaben der zahlenden Person, die TWINT anzeigt.</li>
@@ -104,10 +118,10 @@
   <li>Die App speichert nur auf dem Gerät, ob und wann der Hinweis auf die Unterstützung zuletzt angezeigt wurde. Es wird nicht gespeichert und nicht übermittelt, ob du etwas beigetragen hast.</li>
 </ul>
 
-<h2>9. Öffnen und Teilen von Dateien</h2>
+<h2>10. Öffnen und Teilen von Dateien</h2>
 <p>Wenn du eine Lernpaket- oder Backup-Datei öffnest (z.&nbsp;B. aus einem Messenger oder Dateimanager), wird sie nur lokal auf deinem Gerät verarbeitet.</p>
 
-<h2>10. Verteilung der App</h2>
+<h2>11. Verteilung der App</h2>
 <p><strong>Handy und Tablet:</strong> Die App wird über Google Play und – für iPhone und iPad – über Apple TestFlight verteilt. Diese Plattformen bearbeiten Daten nach ihren eigenen Datenschutzbestimmungen (<a href="https://policies.google.com/privacy?hl=de">Google</a>, <a href="https://www.apple.com/chde/legal/privacy/">Apple</a>). Im Rahmen der Testphase kann der Entwickler dabei folgende Daten erhalten:</p>
 <ul>
   <li>die E-Mail-Adresse, mit der du als Testerin oder Tester eingeladen bzw. freigeschaltet wurdest,</li>
@@ -117,19 +131,19 @@
 <p>Diese Daten werden nur für die Verteilung der App und die Fehlerbehebung verwendet und nicht weitergegeben.</p>
 <p><strong>Computer:</strong> Die Fassungen für Windows und macOS werden <strong>nicht</strong> über einen App-Store verteilt, sondern über den geschützten Bereich der Lernpaket-Bibliothek auf dem Server in der Schweiz. Weder Google noch Apple erfahren etwas über diese Installation. Was dabei protokolliert wird, steht in Ziffer 6.</p>
 
-<h2>11. Website</h2>
+<h2>12. Website</h2>
 <p>Für den Besuch der Website, auf der diese Erklärung veröffentlicht ist, gilt die <a href="../datenschutz.html">Datenschutzerklärung der Website</a>.</p>
 
-<h2>12. Bekanntgabe ins Ausland</h2>
-<p>Bei der Nutzung von Google Drive, GitHub, Google Play und Apple TestFlight können Daten in Länder ausserhalb der Schweiz übermittelt werden, insbesondere in die USA. Diese Anbieter stützen sich dafür nach eigenen Angaben auf anerkannte Garantien, etwa das Swiss-U.S. Data Privacy Framework oder Standardvertragsklauseln. Die Lernpaket-Bibliothek, die Rückmeldungen und der Download der PC-Fassung laufen über einen Server in der Schweiz.</p>
+<h2>13. Bekanntgabe ins Ausland</h2>
+<p>Bei der Nutzung von Google Drive, GitHub, Google Play und Apple TestFlight können Daten in Länder ausserhalb der Schweiz übermittelt werden, insbesondere in die USA. Bei eingeschalteter KI-Vorbewertung (Ziffer 7) werden Frage, Musterlösung und deine Antwort an Mistral AI in Frankreich übermittelt; für die EU besteht ein Angemessenheitsbeschluss des Bundesrats, die Daten geniessen dort also einen gleichwertigen Schutz. Diese Anbieter stützen sich dafür nach eigenen Angaben auf anerkannte Garantien, etwa das Swiss-U.S. Data Privacy Framework oder Standardvertragsklauseln. Die Lernpaket-Bibliothek, die Rückmeldungen und der Download der PC-Fassung laufen über einen Server in der Schweiz.</p>
 
-<h2>13. Datensicherheit</h2>
+<h2>14. Datensicherheit</h2>
 <p>Verbindungen der App zu Google, zur Versionsdatei und zur Lernpaket-Bibliothek erfolgen verschlüsselt (HTTPS). Auf Handy und Tablet liegen die lokalen Daten im geschützten Speicherbereich der App, auf den andere Apps nicht zugreifen können; für den Computer gilt die Einschränkung in Ziffer 2.</p>
 
-<h2>14. Deine Rechte</h2>
+<h2>15. Deine Rechte</h2>
 <p>Du hast nach dem DSG insbesondere das Recht auf Auskunft, Berichtigung und Löschung deiner Personendaten. Da die App deine Daten auf deinem Gerät und in deinem eigenen Google-Konto speichert, kannst du diese jederzeit selbst einsehen und löschen (siehe Ziffern 2 und 4). Für alles Übrige genügt eine Nachricht an <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a>. Für Daten, die Google, Apple oder GitHub als eigene Verantwortliche bearbeiten, wende dich direkt an diese Anbieter. Du hast zudem das Recht, dich beim <a href="https://www.edoeb.admin.ch">Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB)</a> zu beschweren.</p>
 
-<h2>15. Änderungen</h2>
+<h2>16. Änderungen</h2>
 <p>Diese Datenschutzerklärung kann angepasst werden, etwa wenn neue Funktionen hinzukommen. Es gilt die jeweils auf dieser Website veröffentlichte Fassung.</p>
 
 </div></main>
