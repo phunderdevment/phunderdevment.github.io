@@ -1,21 +1,21 @@
 {
   "android": {
-    "neusteVersion": "1.9.0",
+    "neusteVersion": "2.0.0",
     "mindestVersion": "1.7.0",
     "link": "https://play.google.com/store/apps/details?id=ch.rslearn.medi"
   },
   "ios": {
-    "neusteVersion": "1.9.0",
+    "neusteVersion": "2.0.0",
     "mindestVersion": "1.7.0",
     "link": "https://www.phunderdevment.ch/rslearn/"
   },
   "desktop": {
-    "neusteVersion": "1.9.0",
+    "neusteVersion": "2.0.0",
     "mindestVersion": "1.7.0",
     "link": "https://bibliothek.phunderdevment.ch/pc/",
-    "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-1.9.0.msi",
-    "sha256": "ae485544ac4f1edef0f4978c8b7a5221b5a6dfdc05a8ed19706e3fd6695396d1"
-},
-  "hinweis": "Das Vorlesen klingt auf Android jetzt so, wie es soll – die App sucht die beste Stimme neu über alle Sprachmotoren. Dazu sind die Einstellungen aufgeräumt und jedes Lernpaket hat nur noch ein Menü."
+    "datei": "https://bibliothek.phunderdevment.ch/pc/dateien/RS-Learn-medi-2.0.0.msi",
+    "sha256": "40eb08e4904aab463c7bf1f0b1e71661bee727a346949d1a59b2d632fe26f70f"
+  },
+  "hinweis": "Neu: Freitextantworten können von einer KI vorbewertet werden – freiwillig, standardmässig aus, und die Punkte vergibst weiterhin du.",
   "infoUrl": "https://www.phunderdevment.ch/rslearn/releasenotes.html"
 }
