@@ -33,12 +33,19 @@ a{color:var(--petrol)}
 @media (prefers-color-scheme:dark){a{color:#7cc3d1}}
 
 /* ---------- Kopfleiste ---------- */
-.bar{background:var(--petrol);color:#fff;border-bottom:6px solid var(--yellow)}
+.bar{background:var(--petrol);color:#fff;border-bottom:6px solid var(--yellow);position:sticky;top:0;z-index:100}
 .bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
 .bar .mark{font-family:var(--head-font);font-weight:700;letter-spacing:2px;color:var(--yellow);text-decoration:none;font-size:.9rem}
 .bar nav{display:flex;gap:16px;flex-wrap:wrap}
 .bar nav a{color:#fff;opacity:.85;text-decoration:none;font-size:.92rem}
 .bar nav a:hover,.bar nav a[aria-current]{opacity:1;text-decoration:underline}
+@media (max-width:760px){
+  .bar .wrap{padding-top:9px;padding-bottom:9px;gap:4px}
+  .bar nav{gap:4px 12px}
+  .bar nav a{font-size:.82rem}
+  .bar .mark{font-size:.8rem}
+  :target{scroll-margin-top:150px}
+}
 
 /* ---------- Einleitung ---------- */
 .intro{padding:34px 0 8px}
@@ -53,7 +60,7 @@ a{color:var(--petrol)}
 
 .phone{
   width:min(340px,100%);margin:0 auto;background:#132126;border-radius:44px;padding:12px;
-  box-shadow:0 26px 54px rgba(0,0,0,.30),0 6px 14px rgba(0,0,0,.22);position:sticky;top:18px;
+  box-shadow:0 26px 54px rgba(0,0,0,.30),0 6px 14px rgba(0,0,0,.22);position:sticky;top:112px;
 }
 @media (max-width:860px){.phone{position:static}}
 .screenbox{background:var(--a-bg);border-radius:33px;overflow:hidden;height:690px;display:flex;flex-direction:column;color:var(--a-text)}

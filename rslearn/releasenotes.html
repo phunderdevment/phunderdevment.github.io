@@ -33,6 +33,24 @@
     .m-wartet{background:#3a2f0e;color:#f0c24a}
   }
 
+  /* --- Ältere Versionen: zugeklappt, auf Klick vollständig --- */
+  details.version.alt{padding:0}
+  details.version.alt>summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;
+    gap:6px 12px;align-items:baseline;margin:0;padding:15px 22px;border-radius:13px}
+  details.version.alt>summary::-webkit-details-marker{display:none}
+  details.version.alt>summary::before{content:"";flex:0 0 auto;align-self:center;width:0;height:0;
+    border-left:6px solid var(--muted);border-top:4.5px solid transparent;
+    border-bottom:4.5px solid transparent;transition:transform .15s}
+  details.version.alt[open]>summary::before{transform:rotate(90deg)}
+  details.version.alt>summary:hover{background:var(--soft)}
+  details.version.alt>summary:hover::before{border-left-color:var(--petrol)}
+  details.version.alt>summary:hover .vnr{color:var(--petrol)}
+  details.version.alt>summary:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+  details.version.alt>summary .vnr{font-size:1.12rem}
+  details.version.alt[open]>summary{padding-bottom:8px}
+  details.version.alt .vinhalt{padding:0 22px 20px}
+  details.version.alt .marken{margin-top:4px}
+
   /* --- Das Wichtigste --- */
   .wichtig{margin:0 0 6px}
   .wichtig h3,.technik h3{font-family:var(--head-font);font-weight:700;font-size:.82rem;
@@ -132,11 +150,12 @@
   </div>
 
   <!-- ===================== 1.9.0 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.9.0</h2>
-      <span class="vdatum">Android, Windows, iPhone/iPad und Mac · 26. Oktober 2026</span>
-    </div>
+      <span class="vdatum">26. Oktober 2026 · Android, Windows, iPhone/iPad und Mac</span>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
@@ -169,14 +188,16 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.8.0 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.8.0</h2>
-      <span class="vdatum">Android, Windows, iPhone/iPad und Mac · 25. Oktober 2026</span>
-    </div>
+      <span class="vdatum">25. Oktober 2026 · Android, Windows, iPhone/iPad und Mac</span>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
@@ -207,14 +228,16 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.7.0 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.7.0</h2>
-      <span class="vdatum">Android, Windows, iPhone/iPad und Mac · 23. Oktober 2026</span>
-    </div>
+      <span class="vdatum">23. Oktober 2026 · Android, Windows, iPhone/iPad und Mac</span>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
@@ -258,14 +281,16 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.6.0 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.6.0</h2>
       <span class="vdatum">Android und Windows 12. Oktober 2026 · iPhone/iPad und Mac 13. Oktober</span>
-    </div>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
@@ -300,14 +325,16 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.5.2 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.5.2</h2>
       <span class="vdatum">7. Oktober 2026 · Mac-Fassung 8. Oktober · iPhone/iPad 10. Oktober</span>
-    </div>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
@@ -338,14 +365,16 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.5.1 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.5.1</h2>
       <span class="vdatum">6. Oktober 2026</span>
-    </div>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">Windows · neu</span>
@@ -394,27 +423,31 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.5.0 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.5.0</h2>
       <span class="vdatum">6. Oktober 2026</span>
-    </div>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">iPhone / iPad</span>
     </div>
 
     <p class="fussnote">Auf Android und Windows war 1.5.0 nur wenige Stunden unterwegs und wurde noch am selben Tag durch 1.5.1 ersetzt – inhaltlich sind die beiden bis auf eine behobene Kleinigkeit identisch, alles dazu steht oben bei 1.5.1. Auf iPhone und iPad ist 1.5.0 die derzeit verfügbare Fassung, weil 1.5.1 dort nicht freigegeben wurde.</p>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.4.5 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.4.5</h2>
       <span class="vdatum">27. September 2026</span>
-    </div>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
@@ -455,14 +488,16 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.4.0 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.4.0</h2>
       <span class="vdatum">22. September 2026</span>
-    </div>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad</span>
@@ -499,14 +534,16 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
   <!-- ===================== 1.3.0 ===================== -->
-  <div class="version">
-    <div class="vkopf">
+  <details class="version alt">
+    <summary class="vkopf">
       <h2 class="vnr">1.3.0</h2>
       <span class="vdatum">September 2026</span>
-    </div>
+    </summary>
+    <div class="vinhalt">
     <div class="marken">
       <span class="marke m-plattform">Android</span>
       <span class="marke m-plattform">iPhone / iPad · neu</span>
@@ -532,13 +569,25 @@
         </ul>
       </div>
     </details>
-  </div>
+    </div>
+  </details>
 
-  <h2>Frühere Versionen</h2>
-  <p class="fussnote">Die Versionen 1.0 bis 1.2 erschienen ausschliesslich für Android, bevor die App auf den gemeinsamen Unterbau für beide Plattformen umgestellt wurde. Sie enthielten die Grundfunktionen: Import von Lernpaketen, Zusammenfassung, Lernziele, Karteikarten, Prüfungssimulation mit Auswertung und Schweizer Notenskala sowie den Abgleich mit dem privaten Ordner im eigenen Google-Konto.</p>
+  <!-- ===================== 1.0 – 1.2 ===================== -->
+  <details class="version alt">
+    <summary class="vkopf">
+      <h2 class="vnr">1.0 – 1.2</h2>
+      <span class="vdatum">nur Android</span>
+    </summary>
+    <div class="vinhalt">
+      <div class="marken">
+        <span class="marke m-plattform">Android</span>
+      </div>
+      <div class="wichtig">
+        <p>Die Versionen 1.0 bis 1.2 erschienen ausschliesslich für Android, bevor die App auf den gemeinsamen Unterbau für beide Plattformen umgestellt wurde. Sie enthielten die Grundfunktionen: Import von Lernpaketen, Zusammenfassung, Lernziele, Karteikarten, Prüfungssimulation mit Auswertung und Schweizer Notenskala sowie den Abgleich mit dem privaten Ordner im eigenen Google-Konto.</p>
+      </div>
+    </div>
+  </details>
 
-  <h2>Etwas gefunden?</h2>
-  <p>Fehler und Verbesserungsvorschläge sind willkommen – in der App über das <strong>Melde-Symbol</strong> oder per E-Mail an <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a>. Was bereits bekannt ist, steht unter <a href="bekannte-fehler.html">Bekannte Fehler</a>.</p>
 
 </div></main>
 

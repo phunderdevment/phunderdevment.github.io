@@ -36,6 +36,15 @@
   .umgehung{background:var(--soft);border-radius:10px;padding:11px 14px;font-size:.93rem}
   .umgehung b{display:block;margin-bottom:2px}
   .leer{color:var(--muted);font-style:italic}
+  /* --- Knopf «Fehler melden» --- */
+  .melden-cta{margin:24px 0 28px}
+  .btn-melden{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#1c2a2f;
+    font-family:var(--head-font);font-weight:700;text-decoration:none;border-radius:999px;
+    padding:13px 26px;font-size:1rem;box-shadow:0 8px 20px rgba(0,0,0,.18);
+    transition:transform .12s,box-shadow .12s}
+  .btn-melden::before{content:"";flex:0 0 9px;height:9px;border-radius:50%;background:#1c2a2f}
+  .btn-melden:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.24)}
+  .btn-melden:focus-visible{outline:2px solid var(--petrol);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -58,7 +67,10 @@
   <h1>Bekannte Fehler</h1>
   <p class="stand">Stand: 28. Oktober 2026</p>
 
-  <p>Hier siehst du, welche Fehler bereits gemeldet wurden und woran gearbeitet wird. Wenn dir etwas auffällt, das hier nicht steht: melde es bitte – in der App über das Melde-Symbol oder direkt an die Kontaktadresse unten.</p>
+  <p>Hier siehst du, welche Fehler bereits gemeldet wurden und woran gearbeitet wird. Fällt dir etwas auf, das hier nicht steht, melde es bitte – in der App über das Melde-Symbol oder mit dem Knopf hier:</p>
+  <p class="melden-cta">
+    <a class="btn-melden" href="mailto:support@phunderdevment.ch?subject=Fehlermeldung%20RS%3ALearn%40medi&amp;body=Was%20ich%20gemacht%20habe%3A%0A%0A%0AWas%20ich%20erwartet%20habe%3A%0A%0A%0AWas%20stattdessen%20passiert%20ist%3A%0A%0A%0AGer%C3%A4t%20und%20Betriebssystem%3A%0A%0AApp-Version%20%28Einstellungen%20%E2%86%92%20Info%29%3A%0A%0A">Fehler melden</a>
+  </p>
 
   <div class="legende">
     <span class="lg offen">Gemeldet</span>
@@ -234,8 +246,11 @@
   </div>
 
   <h2>Etwas gefunden?</h2>
-  <p>Am hilfreichsten ist eine Meldung, die sagt: was du gemacht hast, was du erwartet hast und was stattdessen passiert ist. Ein Screenshot hilft zusätzlich, ebenso die Angabe deines Geräts.</p>
-  <p>In der App findest du beim jeweiligen Inhalt ein <strong>Melde-Symbol</strong> – damit landet die Rückmeldung direkt beim Ersteller. Alternativ genügt eine kurze Nachricht oder eine E-Mail an <a href="mailto:support@phunderdevment.ch">support@phunderdevment.ch</a>.</p>
+  <p>Am hilfreichsten ist eine Meldung, die sagt: was du gemacht hast, was du erwartet hast und was stattdessen passiert ist. Ein Screenshot hilft zusätzlich, ebenso die Angabe deines Geräts und der App-Version.</p>
+  <p>Der Knopf öffnet dein Mailprogramm mit einer vorbereiteten Nachricht – du musst nur noch ausfüllen. Geht es um einen <strong>Fehler im Lerninhalt</strong> einer Frage, ist das <strong>Melde-Symbol in der App</strong> der bessere Weg: Die Rückmeldung landet direkt beim Ersteller des Lernpakets.</p>
+  <p class="melden-cta">
+    <a class="btn-melden" href="mailto:support@phunderdevment.ch?subject=Fehlermeldung%20RS%3ALearn%40medi&amp;body=Was%20ich%20gemacht%20habe%3A%0A%0A%0AWas%20ich%20erwartet%20habe%3A%0A%0A%0AWas%20stattdessen%20passiert%20ist%3A%0A%0A%0AGer%C3%A4t%20und%20Betriebssystem%3A%0A%0AApp-Version%20%28Einstellungen%20%E2%86%92%20Info%29%3A%0A%0A">Fehler melden</a>
+  </p>
 
 </div></main>
 

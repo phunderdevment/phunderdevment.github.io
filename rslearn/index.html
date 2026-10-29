@@ -14,16 +14,28 @@
   .btn-zweit:hover{border-color:#fff;background:rgba(255,255,255,.1)}
   .kontakt-zeile{margin-top:10px}
   main .cards{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  /* Navigation klebt oben. Sie liegt bewusst ausserhalb von .hero: dort verhindert
+     overflow:hidden jedes position:sticky. */
+  .hero-bar{position:sticky;top:0;z-index:100;background:var(--petrol);color:#fff}
+  .hero-bar .hero-nav{padding-top:14px;padding-bottom:14px}
+  @media (max-width:760px){
+    .hero-bar .hero-nav{padding-top:8px;padding-bottom:8px;gap:4px}
+    .hero-bar .hero-nav nav{gap:4px 12px}
+    .hero-bar .hero-nav a{font-size:.82rem}
+  }
   .neu{display:inline-block;background:var(--yellow,#f4b400);color:#1c2a2f;font-weight:700;
     border-radius:999px;padding:1px 9px;font-size:.72rem;letter-spacing:.04em;margin-left:7px;vertical-align:2px}
 </style>
 </head>
 <body>
-<header class="hero">
+<header class="hero-bar">
 <div class="wrap hero-nav">
 <a href="../">‹ Alle Apps</a>
 <nav><a href="demo.html">Demo</a><a href="unterstuetzen.html">Unterstützen</a><a href="releasenotes.html">Release Notes</a><a href="bekannte-fehler.html">Bekannte Fehler</a><a href="datenschutz.html">Datenschutz</a><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></nav>
 </div>
+</header>
+
+<header class="hero">
 <div class="wrap hero-grid">
 <div>
 <p class="eyebrow">Lern-App · Android, iPhone/iPad, Windows &amp; Mac</p>
@@ -35,9 +47,10 @@
 <li>Karteikarten mit Wiederholungsplan</li>
 <li>Fortlaufender Test: das ganze Lernpaket durcharbeiten, jede Frage genau einmal</li>
 <li>Prüfungssimulation mit Auswertung und Schweizer Note</li>
+<li>Freitextantworten auf Wunsch von einer KI vorbewerten lassen – freiwillig, die Note vergibst du<span class="neu">Neu</span></li>
 <li>Optionaler Abgleich zwischen den eigenen Geräten</li>
 </ul>
-<p class="status"><span class="pill">Version 1.9.0</span> Android, Windows und Mac · für iPhone/iPad noch in Prüfung</p>
+<p class="status"><span class="pill">Version 2.0.0</span> Android, iPhone/iPad, Windows und Mac</p>
 <p class="demo-cta cta-reihe"><a class="btn-demo" href="demo.html">▶ Demo-Modus · App durchklicken</a><a class="btn-zweit" href="unterstuetzen.html">♥ Projekt unterstützen</a></p>
 </div>
 <div class="phone-wrap"><div class="phone"><img src="img/app-uebersicht.webp" width="720" height="1560" alt="Screenshot der App: Übersicht einer Prüfungsvorbereitung mit Fortschritt, Zusammenfassung, Lernen, Karteikarten und Prüfungssimulation"></div></div>
